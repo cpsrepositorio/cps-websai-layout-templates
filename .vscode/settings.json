@@ -1,0 +1,5 @@
+{
+  "css.lint.propertyIgnoredDueToDisplay": "ignore",
+  "files.associations": { "*.css": "postcss" },
+  "editor.formatOnSave": true
+}

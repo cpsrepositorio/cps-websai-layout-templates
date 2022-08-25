@@ -1,0 +1,135 @@
+form {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-flow: column;
+  gap: 0.25rem;
+
+  & > span {
+    font-size: var(--font-size-label);
+    line-height: var(--leading-label);
+  }
+
+  &.invalid {
+    & > span {
+      color: var(--text-critical);
+    }
+
+    & > input,
+    & > select,
+    & > textarea {
+      padding-bottom: calc(0.375rem - 1px) !important;
+      border-bottom-width: 2px !important;
+      border-bottom-color: var(--text-critical) !important;
+    }
+  }
+}
+
+input,
+select,
+textarea {
+  &:not([type='hidden']):not([type='button']):not([type='checkbox']):not([type='file']):not([type='image']):not([type='radio']):not([type='range']):not([type='reset']):not([type='submit']) {
+    transition-property: var(--transition-property);
+    transition-timing-function: var(--transition-timing-function);
+    transition-duration: var(--transition-duration);
+    background: #ffffffb3;
+    border: solid 1px #0000000f;
+    border-bottom-color: #00000072;
+    border-radius: var(--rounded-sm);
+    font-size: var(--font-size-body);
+    line-height: var(--leading-body);
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    min-height: 2rem;
+
+    &::placeholder {
+      color: var(--text-secondary);
+    }
+
+    &:not(:disabled):hover {
+      background: #f5f5f5b3;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown):invalid {
+      padding-bottom: calc(0.375rem - 1px);
+      border-bottom-width: 2px;
+    }
+
+    &:focus {
+      border-bottom-color: var(--text-accent);
+    }
+
+    &:not(:placeholder-shown):invalid {
+      border-bottom-color: var(--text-critical);
+    }
+
+    &:disabled {
+      color: var(--text-disabled);
+      background: #f9f9f94d;
+      border-color: #0000000f;
+
+      &::placeholder {
+        color: var(--text-disabled);
+      }
+    }
+
+    @nest .dark & {
+      background: #ffffff0d;
+      border-color: #ffffff14;
+      border-bottom-color: #ffffff8b;
+
+      &:not(:disabled):hover {
+        background: #ffffff15;
+      }
+
+      &:focus {
+        border-bottom-color: var(--accent-light-2);
+      }
+
+      &:disabled {
+        background: #ffffff0b;
+        border-color: #ffffff12;
+      }
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      /* HACK: Hook when auto fill is shown, so JavaScript can capture on 'animationstart'. */
+      animation: auto-fill-start 0s;
+
+      /* HACK: Make real auto fill color transition takes all the day. */
+      transition-property: background-color, color;
+      transition-duration: 86400s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0s;
+    }
+
+    &:not(:-webkit-autofill) {
+      /* HACK: Hook when auto fill is canceled, so JavaScript can capture on 'animationstart'. */
+      animation: auto-fill-end 0s;
+    }
+  }
+}
+
+@keyframes auto-fill-start {
+  0%,
+  100% {
+    /* HACK: Empty just to ensure 'animationstart' will trigger 'auto-fill-start'. */
+  }
+}
+
+@keyframes auto-fill-cancel {
+  0%,
+  100% {
+    /* HACK: Empty just to ensure 'animationstart' will trigger 'auto-fill-cancel'. */
+  }
+}

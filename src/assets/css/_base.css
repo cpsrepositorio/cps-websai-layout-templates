@@ -1,0 +1,125 @@
+@import './preflight.css';
+@import './variables.css';
+@import './typography.css';
+@import './positioning.css';
+@import './spacing.css';
+@import './backgrounds.css';
+@import './shadows.css';
+@import './buttons.css';
+@import './icons.css';
+@import './forms.css';
+@import './logos.css';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: normal 1em 'Open Sans', 'Segoe UI', Verdana, Sans-serif;
+  color: var(--text-primary);
+  background: var(--background-solid-base);
+}
+
+.max-width {
+  width: 100%;
+
+  @media (width > 768px) {
+    max-width: var(--breakpoint-xl);
+  }
+}
+
+a[href]:not([tabindex^='-']):not([role='button']) {
+  color: var(--text-brand);
+
+  &:hover {
+    color: var(--brand-dark-3);
+  }
+
+  @nest .dark & {
+    color: var(--brand-light-2);
+
+    &:hover {
+      color: var(--brand-light-3);
+    }
+  }
+}
+
+a[href]:not([tabindex^='-']),
+area[href]:not([tabindex^='-']),
+input:not([type='hidden']):not([disabled]):not([tabindex^='-']),
+select:not([disabled]):not([tabindex^='-']),
+textarea:not([disabled]):not([tabindex^='-']),
+button:not([disabled]):not([tabindex^='-']),
+iframe:not([tabindex^='-']),
+audio[controls]:not([tabindex^='-']),
+video[controls]:not([tabindex^='-']),
+[contenteditable]:not([tabindex^='-']),
+[tabindex]:not([tabindex^='-']) {
+  transition-property: var(--transition-property);
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+  outline-style: solid;
+  outline-width: 1.5px;
+  outline-offset: 1px;
+  outline-color: #0000;
+
+  &:focus-visible {
+    outline-color: #000;
+  }
+
+  @nest .dark & {
+    outline-color: #fff0;
+  }
+
+  @nest .dark &:focus-visible {
+    outline-color: #fff;
+  }
+}
+
+hr {
+  display: block;
+  width: 100%;
+  border: 0;
+
+  &[data-line] {
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      #00000014,
+      transparent calc(50% + 1px)
+    );
+  }
+
+  @nest .dark &[data-line] {
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      #ffffff15,
+      transparent calc(50% + 1px)
+    );
+  }
+
+  &[data-text] {
+    position: relative;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+
+    &::after {
+      content: attr(data-text);
+      position: relative;
+      display: inline-block;
+      color: black;
+      padding: 0 0.25rem;
+      font-size: 0.75rem;
+      line-height: 0.875rem;
+      height: 1rem;
+      top: -1px;
+      color: var(--text-tertiary);
+      background: var(--background-solid-base);
+    }
+  }
+}

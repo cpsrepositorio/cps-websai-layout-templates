@@ -1,0 +1,73 @@
+.logo-websai,
+.logo-cps {
+  &[data-size='sm'] {
+    height: 2.625rem;
+  }
+
+  &:not([data-size]),
+  &[data-size='md'] {
+    height: 3.75rem;
+  }
+
+  &[data-size='lg'] {
+    height: 5rem;
+  }
+
+  &[data-touchable] {
+    transition-property: var(--transition-property);
+    transition-timing-function: var(--transition-timing-function);
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+      filter: brightness(0.6);
+
+      @nest .dark & {
+        filter: brightness(1.4);
+      }
+    }
+  }
+}
+
+.logo-websai {
+  & .icon {
+    fill: var(--text-tertiary);
+  }
+
+  & .title {
+    fill: var(--brand-base);
+  }
+
+  & .year {
+    fill: var(--accent-base);
+  }
+
+  @nest .dark & .icon {
+    fill: var(--text-disabled);
+  }
+
+  @nest .dark & .title {
+    fill: var(--brand-light-1);
+  }
+
+  @nest .dark & .year {
+    fill: var(--accent-light-1);
+  }
+}
+
+.logo-cps {
+  & .icon {
+    fill: var(--brand-base);
+  }
+
+  & .title {
+    fill: var(--text-secondary);
+  }
+
+  @nest .dark & .icon {
+    fill: var(--brand-light-1);
+  }
+
+  &[data-simple] .title {
+    display: none;
+  }
+}

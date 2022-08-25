@@ -1,0 +1,22 @@
+{
+  "plugins": {
+    "posthtml-doctype": {
+      "doctype": "HTML 5"
+    },
+    "posthtml-include": {
+      "root": "src",
+      "encoding": "utf8"
+    },
+    "posthtml-inline-svg": {
+      "cwd": "src",
+      "tag": "inline-svg",
+      "attr": "src",
+      "svgo": {
+        "plugins": [
+          { "removeTitle": false },
+          { "inlineStyles": false }
+        ]
+      }
+    }
+  }
+}

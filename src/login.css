@@ -1,0 +1,62 @@
+body {
+  @media (width > 768px) {
+    padding: 1rem;
+
+    & > .max-width {
+      border-radius: var(--rounded-lg);
+
+      & > main {
+        border-radius: var(--rounded-lg) 0 0 var(--rounded-lg);
+      }
+
+      & > aside {
+        border-radius: 0 var(--rounded-lg) var(--rounded-lg) 0;
+      }
+    }
+  }
+}
+
+button,
+[role='button'],
+form {
+  width: 100%;
+  max-width: 22.5rem;
+}
+
+.bg-solid-base,
+.bg-mica {
+  position: relative;
+  padding: 2rem 1rem;
+
+  & hr {
+    width: calc(100% + 2rem);
+  }
+
+  @media (width > 768px) {
+    padding: 2.5rem 1.5rem;
+
+    & hr {
+      width: calc(100% + 3rem);
+    }
+  }
+
+  @media (width > 1280px) {
+    padding: 2.5rem;
+
+    & hr {
+      width: calc(100% + 5rem);
+    }
+  }
+}
+
+.woman-illustration {
+  max-width: var(--breakpoint-sm);
+  margin-bottom: 0.5rem;
+  align-self: center;
+}
+
+#color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

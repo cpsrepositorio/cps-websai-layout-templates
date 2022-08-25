@@ -1,0 +1,30 @@
+{
+  "name": "cps-websai-layout-templates",
+  "version": "1.0.0",
+  "description": "Conjunto de templates de layout aplicando o CPS Design System às interfaces do WebSAI.",
+  "author": "Erick Eduardo Petrucelli <erick.petrucelli@cps.sp.gov.br>",
+  "license": "MIT",
+  "private": true,
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "@parcel/transformer-css": {
+    "errorRecovery": true,
+    "drafts": {
+      "nesting": true
+    }
+  },
+  "scripts": {
+    "dev": "parcel src/index.html --dist-dir cps-websai-layout-templates --open",
+    "build": "parcel build src/index.html --dist-dir cps-websai-layout-templates --public-url /cps-websai-layout-templates",
+    "start": "http-server -b -o cps-websai-layout-templates"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "parcel": "^2.7.0"
+  },
+  "devDependencies": {
+    "posthtml": "^0.16.6",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.4",
+    "posthtml-inline-svg": "^0.2.0"
+  }
+}

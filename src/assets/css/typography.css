@@ -1,0 +1,99 @@
+/* Text colors */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.text-disabled {
+  color: var(--text-disabled);
+}
+
+.text-brand {
+  color: var(--text-brand);
+}
+
+.text-accent {
+  color: var(--text-accent);
+}
+
+/* Text styles */
+.font-italic {
+  font-style: italic;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* Text sizes */
+.font-size-stamp {
+  font-size: var(--font-size-stamp);
+  line-height: var(--leading-stamp);
+}
+
+.font-size-caption {
+  font-size: var(--font-size-caption);
+  line-height: var(--leading-caption);
+}
+
+.font-size-label {
+  font-size: var(--font-size-label);
+  line-height: var(--leading-label);
+}
+
+.font-size-body {
+  font-size: var(--font-size-body);
+  line-height: var(--leading-body);
+}
+
+.font-size-body-strong {
+  font-size: var(--font-size-body-strong);
+  line-height: var(--leading-body-strong);
+}
+
+.font-size-body-large {
+  font-size: var(--font-size-body-large);
+  line-height: var(--leading-body-large);
+}
+
+.font-size-subtitle {
+  font-size: var(--font-size-subtitle);
+  line-height: var(--leading-subtitle);
+}
+
+.font-size-title {
+  font-size: var(--font-size-title);
+  line-height: var(--leading-title);
+}
+
+/* Text positioning */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}

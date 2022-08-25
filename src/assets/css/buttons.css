@@ -1,0 +1,137 @@
+button,
+[type='button'],
+[type='reset'],
+[type='submit'],
+[role='button'] {
+  transition-property: var(--transition-property);
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+  display: inline-flex;
+  place-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: var(--rounded-md);
+  font-size: 0.875rem;
+  line-height: 1rem;
+
+  & > span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  &[data-size='xs'] {
+    max-width: min-content;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    height: 1.625rem;
+  }
+
+  &[data-size='sm'] {
+    height: 1.75rem;
+  }
+
+  &:not([data-size]),
+  &[data-size='md'] {
+    height: 2rem;
+  }
+
+  &[data-size='lg'] {
+    height: 2.5rem;
+  }
+
+  &[disabled] {
+    cursor: default;
+  }
+
+  &:not([data-appearance]),
+  &[data-appearance='standard'] {
+    background: #ffffffb3;
+    border: solid 1px #0000000f;
+    border-bottom-color: #00000029;
+
+    &:not([disabled]):hover {
+      background: #00000008;
+    }
+
+    &:not([disabled]):active {
+      color: var(--text-tertiary);
+      background: #00000005;
+      border-color: #0000000f;
+    }
+
+    &[disabled] {
+      color: var(--text-disabled);
+      border-color: #0000000f;
+    }
+
+    @nest .dark & {
+      background: #ffffff0f;
+      border-color: #ffffff12;
+      border-bottom-color: #ffffff17;
+
+      &:not([disabled]):hover {
+        background: #ffffff0a;
+      }
+
+      &:not([disabled]):active {
+        background: #ffffff05;
+        border-color: #ffffff12;
+      }
+
+      &[disabled] {
+        border-color: #ffffff12;
+      }
+    }
+  }
+
+  &[data-appearance='accent'] {
+    color: #fff;
+    background: var(--accent-base);
+    border: solid 1px #ffffff14;
+    border-bottom-color: #00000066;
+
+    &:not([disabled]):hover {
+      background: #09323ce6;
+    }
+
+    &:not([disabled]):active {
+      color: #ffffffb3;
+      background: #09323ccc;
+      border-color: #ffffff14;
+    }
+
+    &[disabled] {
+      color: #fff;
+      background: #00000037;
+      border-color: #00000000;
+    }
+
+    @nest .dark & {
+      color: #000;
+      background: var(--accent-light-1);
+      border-color: #ffffff14;
+      border-bottom-color: #00000024;
+
+      &:not([disabled]):hover {
+        background: #49d5f0e6;
+      }
+
+      &:not([disabled]):active {
+        color: #00000080;
+        background: #49d5f0cc;
+        border-color: #ffffff14;
+      }
+
+      &[disabled] {
+        color: #ffffff87;
+        background: #ffffff28;
+        border-color: #ffffff00;
+      }
+    }
+  }
+}

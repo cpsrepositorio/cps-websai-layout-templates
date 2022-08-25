@@ -1,0 +1,168 @@
+<html lang="pt-BR">
+  <head>
+    <include src="templates/head.html">
+      { "title": "Acesso - WebSAI" }
+    </include>
+
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body class="font-size-body bg-picture place-items-center">
+    <div class="max-width columns-gte-md shadow-2xl">
+      <main class="bg-solid-base flow-vertical centered space-6">
+        <inline-svg
+          src="assets/images/logo-websai.svg"
+          data-size="lg"
+        ></inline-svg>
+
+        <button id="color-scheme" data-size="xs" title="Modo escuro">
+          <inline-svg
+            src="assets/images/icon-sunny.svg"
+            role="presentation"
+            aria-hidden
+            class="sunny hidden"
+          ></inline-svg>
+
+          <inline-svg
+            src="assets/images/icon-moon.svg"
+            role="presentation"
+            aria-hidden
+            class="moon"
+          ></inline-svg>
+        </button>
+
+        <hr />
+
+        <div class="flow-vertical centered space-4 text-center">
+          <h2 class="font-size-subtitle font-bold">
+            Acesso à plataforma de pesquisa
+          </h2>
+          <p class="text-secondary">
+            Realize seu acesso de forma facilitada com sua conta institucional.
+          </p>
+        </div>
+
+        <button data-size="lg">
+          <inline-svg
+            src="assets/images/logo-microsoft.svg"
+            role="presentation"
+            aria-hidden
+            data-size="xl"
+          ></inline-svg>
+          <span>Entrar com sua conta Microsoft</span>
+        </button>
+
+        <hr data-line data-text="ou" />
+
+        <p class="text-secondary text-center">
+          Utilize o mecanismo de acesso tradicional com e-mail e senha.
+        </p>
+
+        <form novalidate>
+          <label for="cpf" class="field">
+            <span>CPF</span>
+            <input
+              id="cpf"
+              type="number"
+              placeholder="Informe seu CPF"
+              autocomplete="username"
+            />
+          </label>
+
+          <label for="password" class="field">
+            <span>Senha</span>
+            <input
+              id="password"
+              type="password"
+              placeholder="Informe sua senha"
+            />
+          </label>
+        </form>
+
+        <a href="./home.html" role="button" data-size="lg">
+          <inline-svg
+            src="assets/images/icon-arrow-enter.svg"
+            role="presentation"
+            aria-hidden
+            data-size="lg"
+          ></inline-svg>
+          <span>Entrar com CPF e senha</span>
+        </a>
+
+        <hr data-line data-text="ou" class="hidden-below-md" />
+
+        <div class="hidden-below-md flow-vertical centered space-4">
+          <p class="text-secondary text-center">
+            Problemas com o acesso?
+            <a href="./ajuda.html">Obtenha ajuda</a>.
+          </p>
+
+          <hr />
+
+          <a
+            href="https://www.cps.sp.gov.br/"
+            target="_blank"
+            class="inline-block"
+          >
+            <inline-svg
+              src="assets/images/logo-cps.svg"
+              data-size="md"
+              data-touchable="true"
+            ></inline-svg>
+          </a>
+        </div>
+      </main>
+
+      <aside class="bg-mica flow-vertical space-4">
+        <inline-svg
+          src="assets/images/woman-with-comment-bubble.svg"
+          role="img"
+          aria-hidden
+          class="woman-illustration"
+        ></inline-svg>
+
+        <h3 class="font-size-subtitle font-bold">O que é o WebSAI?</h3>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia.
+        </p>
+      </aside>
+
+      <div class="hidden-above-md bg-solid-base flow-vertical centered space-4">
+        <p class="text-secondary text-center">
+          Problemas com o acesso?
+          <a href="./ajuda.html">Obtenha ajuda</a>.
+        </p>
+
+        <hr />
+
+        <a
+          href="https://www.cps.sp.gov.br/"
+          target="_blank"
+          class="inline-block"
+        >
+          <inline-svg
+            src="assets/images/logo-cps.svg"
+            data-size="md"
+            data-touchable="true"
+          ></inline-svg>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

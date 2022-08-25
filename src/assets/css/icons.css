@@ -1,0 +1,19 @@
+.icon,
+svg[role='presentation'] {
+  &[data-size='sm'] {
+    height: 0.75rem;
+  }
+
+  &:not([data-size]),
+  &[data-size='md'] {
+    height: 1rem;
+  }
+
+  &[data-size='lg'] {
+    height: 1.25rem;
+  }
+
+  &[data-size='xl'] {
+    height: 1.5rem;
+  }
+}
