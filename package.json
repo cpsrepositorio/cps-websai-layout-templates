@@ -15,13 +15,15 @@
   "scripts": {
     "dev": "parcel src/index.html --dist-dir cps-websai-layout-templates --open",
     "build": "parcel build src/index.html --dist-dir cps-websai-layout-templates --public-url /cps-websai-layout-templates",
-    "start": "http-server -b -o cps-websai-layout-templates"
+    "start": "http-server -b -o cps-websai-layout-templates",
+    "deploy": "yarn build && gh-pages -d cps-websai-layout-templates"
   },
   "dependencies": {
     "http-server": "^14.1.1",
     "parcel": "^2.7.0"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "posthtml": "^0.16.6",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4",
