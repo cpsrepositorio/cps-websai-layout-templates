@@ -6,12 +6,6 @@
   "license": "MIT",
   "private": true,
   "browserslist": "> 0.5%, last 2 versions, not dead",
-  "@parcel/transformer-css": {
-    "errorRecovery": true,
-    "drafts": {
-      "nesting": true
-    }
-  },
   "scripts": {
     "dev": "parcel src/index.html --dist-dir cps-websai-layout-templates --open",
     "build": "parcel build src/index.html --dist-dir cps-websai-layout-templates --public-url /cps-websai-layout-templates",
@@ -24,9 +18,23 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0",
+    "parcel-namer-custom": "^0.2.0",
     "posthtml": "^0.16.6",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4",
-    "posthtml-inline-svg": "^0.2.0"
+  },
+  "@parcel/transformer-css": {
+    "errorRecovery": true,
+    "drafts": {
+      "nesting": true
+    }
+  },
+  "parcel-namer-custom": {
+    "favicon.ico": "favicon.ico",
+    ".svg$": "[folder]/[name].[hash].[type]",
+    ".jpg$": "[folder]/[name].[hash].[type]",
+    ".png$": "[folder]/[name].[hash].[type]",
+    ".css$": "styles/[name].[hash].[type]",
+    ".js$": "scripts/[name].[hash].[type]"
   }
 }
