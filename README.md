@@ -2,6 +2,8 @@
 
 > Conjunto de _templates_ de _layout_ aplicando o CPS Design System às interfaces do WebSAI.
 
+https://user-images.githubusercontent.com/242274/186919022-f1943be2-a54c-44e5-a055-a6b25e89cd6b.mp4
+
 **Demonstração:** https://cpsrepositorio.github.io/cps-websai-layout-templates/
 
 ## Introdução
