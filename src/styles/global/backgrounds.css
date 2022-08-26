@@ -62,7 +62,7 @@
 
 .bg-picture {
   position: relative;
-  background: url('../images/cps-internal-photo.jpg') center/cover fixed;
+  background: url('../../images/cps-internal-photo.jpg') center/cover fixed;
 
   &::before {
     position: fixed;
