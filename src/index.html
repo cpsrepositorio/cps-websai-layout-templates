@@ -13,21 +13,9 @@
       <main class="bg-solid-base flow-vertical centered space-6">
         <inline-svg src="images/logo-websai.svg" data-size="lg"></inline-svg>
 
-        <button id="color-scheme" data-size="xs" title="Modo escuro">
-          <inline-svg
-            src="images/icon-sunny.svg"
-            role="presentation"
-            aria-hidden
-            class="sunny hidden"
-          ></inline-svg>
-
-          <inline-svg
-            src="images/icon-moon.svg"
-            role="presentation"
-            aria-hidden
-            class="moon"
-          ></inline-svg>
-        </button>
+        <include src="templates/color-scheme-button.html">
+          { "appearance": "standard" }
+        </include>
 
         <hr />
 
