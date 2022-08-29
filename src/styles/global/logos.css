@@ -1,7 +1,19 @@
 .logo-websai,
 .logo-cps {
+  &[data-size='xs'] {
+    height: 2.25rem;
+  }
+
   &[data-size='sm'] {
     height: 2.625rem;
+  }
+
+  &[data-size='xs-to-sm'] {
+    height: 2.25rem;
+
+    @media (width >= 768px) {
+      height: 2.625rem;
+    }
   }
 
   &:not([data-size]),
