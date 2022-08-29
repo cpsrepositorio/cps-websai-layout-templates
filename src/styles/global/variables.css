@@ -67,6 +67,13 @@
   --rounded-lg: 8px;
   --rounded-full: 50%;
 
+  --shadow-card-rest: 0 2px 4px rgba(0 0 0 / 4%);
+  --shadow-card-hover: 0 2px 4px rgba(0 0 0 / 10%);
+  --shadow-tooltip: 0 4px 8px rgba(0 0 0 / 14%);
+  --shadow-flyout: 0 8px 16px rgba(0 0 0 / 14%);
+  --shadow-dialog: 0 2px 21px rgba(0 0 0 / 14.74%),
+    0 32px 64px rgba(0 0 0 / 18.76%);
+
   --transition-property: color, background-color, border-color,
     text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
     backdrop-filter;
@@ -101,4 +108,10 @@
   --background-caution: #433519;
   --background-success: #393d1b;
   --background-critical: #442726;
+
+  --shadow-card-rest: 0 2px 4px rgba(0 0 0 / 13%);
+  --shadow-card-hover: 0 2px 4px rgba(0 0 0 / 26%);
+  --shadow-tooltip: 0 4px 8px rgba(0 0 0 / 26%);
+  --shadow-flyout: 0 8px 16px rgba(0 0 0 / 26%);
+  --shadow-dialog: 0 2px 21px rgba(0 0 0 / 37%), 0 32px 64px rgba(0 0 0 / 37%);
 }

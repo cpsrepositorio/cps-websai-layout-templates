@@ -1,47 +1,19 @@
-.shadow {
-  box-shadow: 0 2px 4px rgba(0 0 0 / 4%);
-
-  @nest .dark & {
-    box-shadow: 0 2px 4px rgba(0 0 0 / 13%);
-  }
-}
-
 .shadow-sm {
-  box-shadow: 0 2px 4px rgba(0 0 0 / 10%);
-
-  @nest .dark & {
-    box-shadow: 0 2px 4px rgba(0 0 0 / 26%);
-  }
+  box-shadow: var(--shadow-card-rest);
 }
 
 .shadow-md {
-  box-shadow: 0 4px 8px rgba(0 0 0 / 14%);
-
-  @nest .dark & {
-    box-shadow: 0 4px 8px rgba(0 0 0 / 26%);
-  }
+  box-shadow: var(--shadow-card-hover);
 }
 
 .shadow-lg {
-  box-shadow: 0 8px 16px rgba(0 0 0 / 14%);
-
-  @nest .dark & {
-    box-shadow: 0 8px 16px rgba(0 0 0 / 14%);
-  }
+  box-shadow: var(--shadow-tooltip);
 }
 
 .shadow-xl {
-  box-shadow: 0 8px 16px rgba(0 0 0 / 14%);
-
-  @nest .dark & {
-    box-shadow: 0 8px 16px rgba(0 0 0 / 26%);
-  }
+  box-shadow: var(--shadow-flyout);
 }
 
 .shadow-2xl {
-  box-shadow: 0 2px 21px rgba(0 0 0 / 14.74%), 0 32px 64px rgba(0 0 0 / 18.76%);
-
-  @nest .dark & {
-    box-shadow: 0 2px 21px rgba(0 0 0 / 37%), 0 32px 64px rgba(0 0 0 / 37%);
-  }
+  box-shadow: var(--shadow-dialog);
 }
