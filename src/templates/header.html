@@ -1,0 +1,42 @@
+<header class="app-header shadow-sm">
+  <div class="max-width content" data-variation="{{ variation }}">
+    <div class="start">
+      <a href="https://www.cps.sp.gov.br/" target="_blank" class="inline-block">
+        <inline-svg
+          src="images/logo-cps.svg"
+          data-size="xs-to-sm"
+          data-touchable="true"
+          data-simple
+        ></inline-svg>
+      </a>
+
+      <a href="./principal.html" class="inline-block">
+        <inline-svg
+          src="images/logo-websai.svg"
+          data-size="xs-to-sm"
+          data-touchable="true"
+        ></inline-svg>
+      </a>
+    </div>
+
+    <div class="middle">
+      <strong class="font-size-subtitle font-bold">{{ title }}</strong>
+      <span class="font-size-body-large">{{ subtitle }}</span>
+    </div>
+
+    <div class="end">
+      <include src="templates/color-scheme-button.html">
+        { "appearance": "ghost" }
+      </include>
+
+      <a href="./index.html" class="inline-block rounded-full" title="Sair">
+        <div class="avatar">
+          <img
+            src="images/sample-avatar-female.jpg?width=42"
+            alt="Kimber Knapczyk"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
