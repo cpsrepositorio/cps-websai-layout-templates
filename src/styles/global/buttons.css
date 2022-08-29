@@ -26,8 +26,8 @@ button,
 
   &[data-size='xs'] {
     max-width: min-content;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
     height: 1.625rem;
   }
 
@@ -131,6 +131,40 @@ button,
         color: #ffffff87;
         background: #ffffff28;
         border-color: #ffffff00;
+      }
+    }
+  }
+
+  &[data-appearance='ghost'] {
+    background: #00000000;
+
+    &:not([disabled]):hover {
+      background: #0000000a;
+    }
+
+    &:not([disabled]):active {
+      color: var(--text-tertiary);
+      background: #00000006;
+    }
+
+    &[disabled] {
+      color: var(--text-disabled);
+      border-color: #00000000;
+    }
+
+    @nest .dark & {
+      background: #ffffff00;
+
+      &:not([disabled]):hover {
+        background: #ffffff0f;
+      }
+
+      &:not([disabled]):active {
+        background: #ffffff0b;
+      }
+
+      &[disabled] {
+        background: #ffffff00;
       }
     }
   }
