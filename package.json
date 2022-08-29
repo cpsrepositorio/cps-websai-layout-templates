@@ -28,7 +28,8 @@
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4",
     "posthtml-inline-svg": "^0.2.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "sharp": "^0.29.1"
   },
   "@parcel/transformer-css": {
     "errorRecovery": true,
