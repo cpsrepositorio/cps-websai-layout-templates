@@ -8,13 +8,337 @@
     <script type="module" src="scripts/principal.js"></script>
   </head>
 
-  <body class="bg-picture">
+  <body class="bg-picture internal-page">
     <include src="templates/header.html">
       { "variation": "no-title", "title": "", "subtitle": "" }
     </include>
 
-    <main>
-      <a href="./questionario.html"></a>
-    </main>
+    <div class="max-width">
+      <section class="notification" data-appearance="caution">
+        <inline-svg
+          src="images/icon-caution.svg"
+          class="icon"
+          role="presentation"
+          aria-hidden
+        ></inline-svg>
+
+        <strong>Atenção!</strong>
+
+        <p>
+          <span class="hidden-below-md">Você possui </span
+          ><b>2</b> questionários não respondidos aguardando sua participação.
+        </p>
+      </section>
+
+      <main class="font-size-body">
+        <section class="bg-acrylic informative">
+          <inline-svg src="images/logo-websai.svg" data-size="lg"></inline-svg>
+
+          <hr />
+
+          <h2 class="font-size-title font-bold">Boas-vindas ao WebSAI!</h2>
+          <p>
+            <b
+              >Texto introdutório explicando do que se trata esta plataforma e
+              dando instruções iniciais ao usuário...</b
+            >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec
+            pretium vulputate sapien nec sagittis aliquam malesuada bibendum
+            arcu. Neque volutpat ac tincidunt vitae semper. Commodo quis
+            imperdiet massa tincidunt.
+          </p>
+        </section>
+
+        <section class="bg-solid-base flow-vertical space-6">
+          <div class="card user-data">
+            <div>
+              <div class="avatar" data-size="lg">
+                <img
+                  src="images/sample-avatar-female.jpg?width=96"
+                  alt="Kimber Knapczyk"
+                />
+              </div>
+
+              <small class="font-size-small text-secondary">
+                Participando como:
+              </small>
+              <strong>Fulana da Silva Santos</strong>
+              <span>RG: 12.345.678-9</span>
+              <span>CPF: 123.456.789-01</span>
+              <span>E-mail: fulana57@fatec.sp.gov.br</span>
+
+              <p class="font-size-label text-secondary">
+                Problemas com estes dados?
+                <a href="./ajuda.html">Obtenha ajuda</a>.
+              </p>
+            </div>
+
+            <form novalidate>
+              <label for="email" class="field">
+                <span>E-mail alternativo</span>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="E-mail alternativo"
+                  autocomplete="email"
+                />
+              </label>
+
+              <label for="phone" class="field">
+                <span>Telefone preferencial</span>
+                <input
+                  id="phone"
+                  type="number"
+                  placeholder="Telefone preferencial"
+                />
+              </label>
+            </form>
+          </div>
+
+          <hr data-line />
+
+          <div class="card surveys">
+            <a
+              href="./questionario.html"
+              class="survey open"
+              aria-describedby="survey1-button"
+            >
+              <inline-svg
+                src="images/icon-caution.svg"
+                class="icon"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+
+              <div>
+                <label>Questionário:</label>
+                <span>WebSAI 2022</span>
+              </div>
+
+              <div>
+                <label>Unidade:</label>
+                <span>Etec Dr. Emílio Hernandez Aguilar</span>
+              </div>
+
+              <div>
+                <label>Perfil:</label>
+                <span>Professor</span>
+              </div>
+
+              <button id="survey1-button" data-appearance="accent">
+                Responder
+              </button>
+            </a>
+
+            <a
+              href="./questionario.html"
+              class="survey open"
+              aria-describedby="survey2-button"
+            >
+              <inline-svg
+                src="images/icon-caution.svg"
+                class="icon"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+
+              <div>
+                <label>Questionário:</label>
+                <span>WebSAI 2022</span>
+              </div>
+
+              <div>
+                <label>Unidade:</label>
+                <span>Fatec Taquaritinga</span>
+              </div>
+
+              <div>
+                <label>Perfil:</label>
+                <span>Aluno</span>
+              </div>
+
+              <button id="survey2-button" data-appearance="accent">
+                Responder
+              </button>
+            </a>
+
+            <a
+              href="./questionario.html"
+              class="survey success"
+              aria-describedby="survey3-button"
+            >
+              <inline-svg
+                src="images/icon-success.svg"
+                class="icon"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+
+              <div>
+                <label>Questionário:</label>
+                <span>WebSAI 2022</span>
+              </div>
+
+              <div>
+                <label>Unidade:</label>
+                <span>Etec Dr. Adail Nunes da Silva</span>
+              </div>
+
+              <div>
+                <label>Perfil:</label>
+                <span>Professor</span>
+              </div>
+
+              <button id="survey3-button" data-appearance="standard">
+                Visualizar
+              </button>
+            </a>
+
+            <a
+              href="./questionario.html"
+              class="survey success"
+              aria-describedby="survey4-button"
+            >
+              <inline-svg
+                src="images/icon-success.svg"
+                class="icon"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+
+              <div>
+                <label>Questionário:</label>
+                <span>WebSAI 2021</span>
+              </div>
+
+              <div>
+                <label>Unidade:</label>
+                <span>Etec Dr. Adail Nunes da Silva</span>
+              </div>
+
+              <div>
+                <label>Perfil:</label>
+                <span>Professor</span>
+              </div>
+
+              <button id="survey4-button" data-appearance="standard">
+                Visualizar
+              </button>
+            </a>
+
+            <a
+              href="./questionario.html"
+              class="survey success"
+              aria-describedby="survey5-button"
+            >
+              <inline-svg
+                src="images/icon-success.svg"
+                class="icon"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+
+              <div>
+                <label>Questionário:</label>
+                <span>WebSAI 2021</span>
+              </div>
+
+              <div>
+                <label>Unidade:</label>
+                <span>Etec Dr. Emílio Hernandez Aguilar</span>
+              </div>
+
+              <div>
+                <label>Perfil:</label>
+                <span>Professor</span>
+              </div>
+
+              <button id="survey5-button" data-appearance="standard">
+                Visualizar
+              </button>
+            </a>
+
+            <a class="survey expired">
+              <inline-svg
+                src="images/icon-critical.svg"
+                class="icon"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+
+              <div>
+                <label>Questionário:</label>
+                <span>WebSAI 2020</span>
+              </div>
+
+              <div>
+                <label>Unidade:</label>
+                <span>Etec Dr. Adail Nunes da Silva</span>
+              </div>
+
+              <div>
+                <label>Perfil:</label>
+                <span>Egresso</span>
+              </div>
+
+              <button disabled>Expirado</button>
+            </a>
+
+            <a class="survey expired">
+              <inline-svg
+                src="images/icon-critical.svg"
+                class="icon"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+
+              <div>
+                <label>Questionário:</label>
+                <span>WebSAI 2019</span>
+              </div>
+
+              <div>
+                <label>Unidade:</label>
+                <span>Etec Dr. Adail Nunes da Silva</span>
+              </div>
+
+              <div>
+                <label>Perfil:</label>
+                <span>Aluno</span>
+              </div>
+
+              <button disabled>Expirado</button>
+            </a>
+
+            <a class="survey expired">
+              <inline-svg
+                src="images/icon-critical.svg"
+                class="icon"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+
+              <div>
+                <label>Questionário:</label>
+                <span>WebSAI 2018</span>
+              </div>
+
+              <div>
+                <label>Unidade:</label>
+                <span>Etec Dr. Adail Nunes da Silva</span>
+              </div>
+
+              <div>
+                <label>Perfil:</label>
+                <span>Aluno</span>
+              </div>
+
+              <button disabled>Expirado</button>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
