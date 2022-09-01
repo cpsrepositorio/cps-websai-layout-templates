@@ -50,6 +50,7 @@ button,
 
   &:not([data-appearance]),
   &[data-appearance='standard'] {
+    color: var(--text-primary);
     background: #ffffffb3;
     border: solid 1px #0000000f;
     border-bottom-color: #00000029;
@@ -90,45 +91,47 @@ button,
   }
 
   &[data-appearance='accent'] {
-    color: #fff;
+    color: var(--text-inverted-primary);
     background: var(--accent-base);
     border: solid 1px #ffffff14;
     border-bottom-color: #00000066;
 
     &:not([disabled]):hover {
+      color: var(--text-inverted-primary);
       background: #09323ce6;
     }
 
     &:not([disabled]):active {
-      color: #ffffffb3;
+      color: var(--text-inverted-tertiary);
       background: #09323ccc;
       border-color: #ffffff14;
     }
 
     &[disabled] {
-      color: #fff;
+      color: var(--text-inverted-disabled);
       background: #00000037;
       border-color: #00000000;
     }
 
     @nest .dark & {
-      color: #000;
+      color: var(--text-inverted-primary);
       background: var(--accent-light-1);
       border-color: #ffffff14;
       border-bottom-color: #00000024;
 
       &:not([disabled]):hover {
+        color: var(--text-inverted-primary);
         background: #49d5f0e6;
       }
 
       &:not([disabled]):active {
-        color: #00000080;
+        color: var(--text-inverted-tertiary);
         background: #49d5f0cc;
         border-color: #ffffff14;
       }
 
       &[disabled] {
-        color: #ffffff87;
+        color: var(--text-inverted-disabled);
         background: #ffffff28;
         border-color: #ffffff00;
       }
