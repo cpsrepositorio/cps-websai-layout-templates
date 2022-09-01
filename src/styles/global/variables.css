@@ -27,6 +27,11 @@
   --text-tertiary: #00000072;
   --text-disabled: #0000005c;
 
+  --text-inverted-primary: #fff;
+  --text-inverted-secondary: #ffffffcc;
+  --text-inverted-tertiary: #ffffffb3;
+  --text-inverted-disabled: #fff;
+
   --text-brand: var(--brand-base);
   --text-accent: var(--accent-base);
 
@@ -90,6 +95,11 @@
   --text-secondary: #ffffffc8;
   --text-tertiary: #ffffff8b;
   --text-disabled: #ffffff5d;
+
+  --text-inverted-primary: #000;
+  --text-inverted-secondary: #00000044;
+  --text-inverted-tertiary: #00000080;
+  --text-inverted-disabled: #ffffff87;
 
   --text-brand: var(--brand-light-3);
   --text-accent: var(--accent-light-3);
