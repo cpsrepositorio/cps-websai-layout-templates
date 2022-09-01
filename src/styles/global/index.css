@@ -222,31 +222,49 @@ hr {
     transition-duration: var(--transition-duration);
   }
 
-  &:not(:active):hover {
-    border-color: #00000029;
-    box-shadow: var(--shadow-card-hover);
+  &:not([data-size]),
+  &[data-size='sm'] {
+    width: 2.625rem;
+    height: 2.625rem;
   }
 
-  &:active {
-    border-color: #0000000f;
+  &[data-size='lg'] {
+    width: 4rem;
+    height: 4rem;
 
-    & > img {
-      opacity: 45%;
+    @media (width >= 768px) {
+      width: 6rem;
+      height: 6rem;
     }
   }
 
-  @nest .dark & {
-    border-color: #0000001a;
-
-    &:hover {
-      border-color: #00000066;
+  &[data-touchable] {
+    &:not(:active):hover {
+      border-color: #00000029;
+      box-shadow: var(--shadow-card-hover);
     }
 
     &:active {
       border-color: #0000000f;
 
       & > img {
-        opacity: 55%;
+        opacity: 45%;
+      }
+    }
+
+    @nest .dark & {
+      border-color: #0000001a;
+
+      &:hover {
+        border-color: #00000066;
+      }
+
+      &:active {
+        border-color: #0000000f;
+
+        & > img {
+          opacity: 55%;
+        }
       }
     }
   }
