@@ -64,6 +64,31 @@
   @nest .dark & .year {
     fill: var(--accent-light-1);
   }
+
+  &[data-monochromatic] {
+    & .title {
+      fill: currentColor;
+      opacity: 98%;
+    }
+
+    & .year {
+      fill: currentColor;
+      opacity: 70%;
+
+      @nest .dark & {
+        opacity: 63%;
+      }
+    }
+
+    & .icon {
+      fill: currentColor;
+      opacity: 30%;
+
+      @nest .dark & {
+        opacity: 23%;
+      }
+    }
+  }
 }
 
 .logo-cps {
@@ -81,5 +106,21 @@
 
   &[data-simple] .title {
     display: none;
+  }
+
+  &[data-monochromatic] {
+    & .icon {
+      fill: currentColor;
+      opacity: 98%;
+    }
+
+    & .title {
+      fill: currentColor;
+      opacity: 70%;
+
+      @nest .dark & {
+        opacity: 63%;
+      }
+    }
   }
 }
