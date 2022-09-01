@@ -84,10 +84,15 @@ hr {
   width: 100%;
   border: 0;
 
+  &[data-spacer] {
+    min-height: 1rem;
+  }
+
   &[data-line] {
+    min-height: 3px;
     background: linear-gradient(
       to bottom,
-      transparent 50%,
+      transparent calc(50% - 1px),
       #00000014,
       transparent calc(50% + 1px)
     );
@@ -96,7 +101,7 @@ hr {
   @nest .dark &[data-line] {
     background: linear-gradient(
       to bottom,
-      transparent 50%,
+      transparent calc(50% - 1px),
       #ffffff15,
       transparent calc(50% + 1px)
     );
