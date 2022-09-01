@@ -269,3 +269,76 @@ hr {
     }
   }
 }
+
+body.internal-page {
+  & > .app-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
+  & > .max-width {
+    padding: 1.5rem 0 1.5rem;
+    margin: auto;
+
+    & main {
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+
+      @media (width >= 1280px) {
+        border-radius: var(--rounded-lg);
+      }
+
+      & > section {
+        &:not(.informative) {
+          padding: 1.5rem 1rem;
+
+          @media (width >= 768px) {
+            padding: 1.75rem 2rem;
+          }
+
+          @media (width >= 1280px) {
+            padding: 2rem 3rem;
+          }
+        }
+
+        &.informative {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.75rem;
+          text-align: center;
+          margin-bottom: -1px;
+          padding: 1.5rem 1rem;
+
+          @media (width >= 768px) {
+            padding: 2rem;
+
+            & p {
+              text-align: left;
+            }
+          }
+
+          @media (width >= 1280px) {
+            padding: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--font-size-body);
+  background: var(--background-solid-tertiary);
+  border: solid 1px #0000000f;
+  border-radius: var(--rounded-lg);
+  padding: 1rem;
+
+  @nest .dark & {
+    border: solid 1px #0000001a;
+  }
+}
