@@ -1,0 +1,184 @@
+.user-data {
+  flex-direction: column;
+  gap: 1.5rem;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .user-data {
+    flex-direction: row;
+  }
+}
+
+.user-data > div,
+.user-data > form {
+  flex: 1;
+}
+
+.user-data > div > .avatar {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .user-data > div > .avatar {
+    margin: 0 1.75rem 1.25rem 0;
+  }
+}
+
+.user-data > div > small,
+.user-data > div > strong,
+.user-data > div > span {
+  word-break: break-all;
+  display: block;
+}
+
+.user-data > div > p {
+  margin-top: 0.75rem;
+}
+
+.surveys {
+  flex-flow: wrap;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.surveys .survey {
+  min-width: 0;
+  flex-direction: column;
+  flex: 0 calc(50% - 1px);
+  align-items: start;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .surveys .survey {
+    flex-direction: row;
+    flex-basis: 100%;
+    gap: 2rem;
+  }
+
+  .surveys .survey > div:nth-child(4) {
+    max-width: 10rem;
+  }
+}
+
+.surveys .survey[href]:hover {
+  box-shadow: inset 0 0 9999px #0000000a;
+}
+
+.dark .surveys .survey[href]:hover {
+  box-shadow: inset 0 0 9999px #f3f3f305;
+}
+
+.surveys .survey[href]:active {
+  box-shadow: inset 0 0 9999px #00000014;
+}
+
+.surveys .survey[href]:active label,
+.surveys .survey[href]:active span {
+  opacity: 0.8;
+}
+
+.dark .surveys .survey[href]:active {
+  box-shadow: inset 0 0 9999px #00000005;
+}
+
+.dark .surveys .survey[href]:active label,
+.dark .surveys .survey[href]:active span {
+  opacity: 0.7;
+}
+
+.surveys .survey.open {
+  background: var(--background-caution);
+}
+
+.surveys .survey.open .icon {
+  color: var(--text-caution);
+}
+
+.surveys .survey.success {
+  background: var(--background-attention);
+}
+
+.surveys .survey.success .icon {
+  color: var(--text-success);
+}
+
+.surveys .survey.expired {
+  background: var(--background-attention);
+}
+
+.surveys .survey.expired .icon {
+  color: var(--text-critical);
+}
+
+.surveys .survey .icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+}
+
+.surveys .survey .icon rect {
+  fill: currentColor;
+}
+
+.surveys .survey .icon path {
+  fill: var(--text-inverted-primary);
+}
+
+@media (min-width: 768px) {
+  .surveys .survey .icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .surveys .survey .icon {
+    place-self: center;
+    margin-right: -1rem;
+    position: static;
+  }
+}
+
+.surveys .survey div {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.surveys .survey label,
+.surveys .survey span {
+  transition-property: var(--transition-property);
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+}
+
+.surveys .survey label {
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+  cursor: inherit;
+}
+
+.surveys .survey span {
+  color: var(--text-primary);
+  font-size: var(--font-size-body);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+}
+
+.surveys .survey button {
+  width: 100%;
+  max-width: 10rem;
+  place-self: center;
+}
