@@ -34,29 +34,33 @@
 
 .bg-mica {
   backdrop-filter: blur(40px);
-  background: #f6f6f680 var(--texture-noise) repeat fixed;
+  background: #f6f6f680;
 
   @nest .dark & {
-    backdrop-filter: blur(80px);
-    background: #ffffff08 var(--texture-noise) repeat fixed;
+    backdrop-filter: blur(60px);
+    background: #ffffff08;
   }
 }
 
 .bg-acrylic {
   backdrop-filter: blur(10px);
-  background: #f3f3f3e6 var(--texture-noise) repeat fixed;
+  background: #f3f3f3cc var(--texture-noise) repeat fixed;
 
   @nest .dark & {
-    background: #202020f5 var(--texture-noise) repeat fixed;
+    backdrop-filter: blur(15px);
+    background: #202020db var(--texture-noise) repeat fixed;
   }
 }
 
 .bg-acrylic-accent {
+  color: var(--text-inverted-primary);
   backdrop-filter: blur(10px);
-  background: #09323ce6 var(--texture-noise) repeat fixed;
+  background: #09323ccc var(--texture-noise) repeat fixed;
 
   @nest .dark & {
-    background: #09323ccc var(--texture-noise) repeat fixed;
+    color: var(--text-primary);
+    backdrop-filter: blur(15px);
+    background: #09323cdb var(--texture-noise) repeat fixed;
   }
 }
 
@@ -70,10 +74,10 @@
     inset: 0 0 0 0;
     z-index: -1;
     backdrop-filter: blur(10px);
-    background: #f3f3f38c var(--texture-noise) repeat fixed;
+    background: #f3f3f373 var(--texture-noise) repeat fixed;
   }
 
   @nest .dark &::before {
-    background: #2c2c2c99 var(--texture-noise) repeat fixed;
+    background: #2c2c2c8c var(--texture-noise) repeat fixed;
   }
 }
