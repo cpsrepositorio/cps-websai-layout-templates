@@ -24,6 +24,10 @@
 }
 
 /* Text styles */
+.font-regular {
+  font-style: normal;
+}
+
 .font-italic {
   font-style: italic;
 }
