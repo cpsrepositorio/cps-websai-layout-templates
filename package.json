@@ -24,6 +24,9 @@
   "devDependencies": {
     "gh-pages": "^4.0.0",
     "parcel-namer-custom": "^0.2.0",
+    "postcss": "^8.4.16",
+    "postcss-modules": "^4.3.0",
+    "postcss-reuse": "^2.1.9",
     "posthtml": "^0.16.6",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4",
