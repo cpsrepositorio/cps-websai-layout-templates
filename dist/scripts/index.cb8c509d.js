@@ -155,4 +155,9 @@
     $2143634baf2b4b8e$var$updateColorScheme(theme)
   }
   $2143634baf2b4b8e$var$detectColorScheme()
+
+  ;[...document.querySelectorAll('input[type="range"]')].forEach((input) => {
+    input.dataset.value = input.value
+    input.addEventListener('input', () => (input.dataset.value = input.value))
+  })
 })()

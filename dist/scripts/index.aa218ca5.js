@@ -151,3 +151,8 @@ function $7b782bc0bc9f7873$var$detectColorScheme() {
   $7b782bc0bc9f7873$var$updateColorScheme(theme)
 }
 $7b782bc0bc9f7873$var$detectColorScheme()
+
+;[...document.querySelectorAll('input[type="range"]')].forEach((input) => {
+  input.dataset.value = input.value
+  input.addEventListener('input', () => (input.dataset.value = input.value))
+})
