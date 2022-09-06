@@ -27,6 +27,80 @@ form {
       border-bottom-color: var(--text-critical) !important;
     }
   }
+
+  & > .legends {
+    display: flex;
+    place-self: stretch;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-label);
+    line-height: var(--leading-label);
+    color: var(--text-secondary);
+    z-index: 0;
+
+    & > *:nth-child(1) {
+      flex: 0 0 calc(20% - 0.3125rem);
+    }
+
+    & > *:nth-child(2) {
+      flex: 0 1;
+      text-align: left;
+      padding-right: 0.75rem;
+    }
+
+    & > *:nth-child(3) {
+      flex: 1 1 auto;
+    }
+
+    & > *:nth-child(4) {
+      flex: 0 1;
+      text-align: right;
+      padding-left: 0.75rem;
+    }
+  }
+
+  & > input {
+    z-index: 1;
+  }
+
+  & > .scale {
+    display: flex;
+    place-self: stretch;
+    justify-content: space-between;
+    text-align: center;
+    font-size: var(--font-size-stamp);
+    line-height: var(--leading-stamp);
+    color: var(--text-primary);
+    margin: -6px 6px 0 6px;
+    z-index: 0;
+
+    @nest .dark & {
+      color: var(--text-secondary);
+    }
+
+    & > option:first-child {
+      color: transparent;
+    }
+
+    & > option {
+      position: relative;
+      padding-top: 8px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 6px;
+        top: 0;
+        left: calc(50% - 0.5px);
+        background: #bbb;
+
+        @nest .dark & {
+          background: #444;
+        }
+      }
+    }
+  }
 }
 
 input,
@@ -338,5 +412,156 @@ textarea {
       opacity: 1;
       transform: scale(1);
     }
+  }
+}
+
+.range-track {
+  box-sizing: border-box;
+  background: #00000072;
+  width: 100%;
+  height: 0.25rem;
+  margin-top: -1px;
+  border-radius: var(--rounded-md);
+
+  @nest .dark & {
+    background: #ffffff8b;
+  }
+}
+
+.range-track-disabled {
+  background: #00000051;
+
+  @nest .dark & {
+    background: #ffffff3f;
+  }
+}
+
+.range-thumb {
+  transition-property: var(--transition-property);
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+  box-sizing: border-box;
+  appearance: none;
+  border: none;
+  margin-top: -8px;
+  height: 1.25rem;
+  width: 1.25rem;
+  background: var(--text-accent);
+  border-radius: var(--rounded-full);
+  border: solid 4px #ffffff;
+  outline: solid 1px #00000029;
+  outline-offset: 0;
+
+  &:hover {
+    border-width: 3px;
+  }
+
+  &:active {
+    border-width: 5px;
+    background: #3a5b63;
+  }
+
+  @nest .dark & {
+    background: var(--accent-light-1);
+    border-color: #454545;
+    outline-color: #ffffff12;
+
+    &:active {
+      background: #48b8ce;
+    }
+  }
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  background: transparent;
+  border-radius: var(--rounded-sm);
+  cursor: pointer;
+  height: 1.375rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @reuse .range-track;
+  }
+
+  &:disabled::-webkit-slider-runnable-track {
+    @reuse .range-track-disabled;
+  }
+
+  &::-moz-range-track {
+    @reuse .range-track;
+  }
+
+  &:disabled::-moz-range-track {
+    @reuse .range-track-disabled;
+  }
+
+  &::-webkit-slider-thumb {
+    @reuse .range-thumb;
+  }
+
+  &::-moz-range-thumb {
+    @reuse .range-thumb;
+
+    margin-top: -8px;
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  &::-moz-range-progress {
+    background: var(--accent-base);
+    border-radius: var(--rounded-sm);
+    height: 0.25rem;
+
+    @nest .dark & {
+      background: var(--accent-light-1);
+    }
+  }
+
+  &::before {
+    content: '';
+    background: var(--accent-base);
+    border-radius: var(--rounded-sm);
+    height: 0.25rem;
+    position: absolute;
+    top: calc(50% - 0.125rem);
+    mask: radial-gradient(
+      circle at calc(100% - 6px),
+      transparent 6px,
+      #fff 6px
+    );
+
+    @nest .dark & {
+      background: var(--accent-light-1);
+    }
+  }
+
+  &[data-value='1']::before {
+    width: calc(20% * 1 + 7.5px);
+  }
+
+  &[data-value='2']::before {
+    width: calc(20% * 2 + 4px);
+  }
+
+  &[data-value='3']::before {
+    width: calc(20% * 3);
+  }
+
+  &[data-value='4']::before {
+    width: calc(20% * 4 - 4px);
+  }
+
+  &[data-value='5']::before {
+    width: calc(20% * 5 - 8.5px);
   }
 }
