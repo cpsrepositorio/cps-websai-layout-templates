@@ -1,0 +1,275 @@
+<html lang="pt-BR">
+  <head>
+    <include src="templates/head.html">
+      { "title": "Questionário - WebSAI" }
+    </include>
+
+    <link rel="stylesheet" href="styles/questionario.css" />
+    <script type="module" src="scripts/questionario.js"></script>
+  </head>
+
+  <body class="bg-picture internal-page">
+    <include src="templates/header.html">
+      { "variation": "standard", "title": "Questionário \"Aluno\"", "subtitle":
+      "Sessão 2 de 3" }
+    </include>
+
+    <div class="max-width">
+      <main class="font-size-body">
+        <section class="bg-acrylic informative">
+          <h2 class="font-size-title font-bold">
+            Sessão 2: Opiniões sobre seu desempenho
+          </h2>
+          <p class="text-tertiary">
+            5 perguntas. 2 minutos estimados para resposta.
+          </p>
+          <p>
+            <b>Texto introdutório explicando a sessão...</b> Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Donec pretium vulputate
+            sapien nec sagittis aliquam malesuada bibendum arcu. Neque volutpat
+            ac tincidunt vitae semper. Commodo quis imperdiet massa tincidunt.
+            Sed risus ultricies tristique nulla. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua.
+          </p>
+        </section>
+
+        <section class="bg-solid-base flow-vertical space-6">
+          <div class="card question">
+            <p class="description">
+              <strong>6.</strong>
+              <span>
+                O quanto você está satisfeito(a) com seu próprio desempenho?
+              </span>
+            </p>
+
+            <div class="options">
+              <label for="question06" class="field">
+                <div class="legends">
+                  <hr data-spacer />
+                  <small class="min">Mínimo</small>
+                  <hr data-line />
+                  <small class="max">Máximo</small>
+                </div>
+
+                <input
+                  id="question06"
+                  type="range"
+                  min="0"
+                  max="5"
+                  step="1"
+                  value="0"
+                  list="question06-list"
+                />
+
+                <datalist id="question06-list" class="scale">
+                  <option value="0">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </datalist>
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="card question">
+            <p class="description">
+              <strong>7.</strong>
+              <span>
+                Como você classifica seu desempenho em relação à
+                <em class="font-regular font-semibold">pontualidade</em>?
+              </span>
+            </p>
+
+            <div class="options">
+              <label for="question07" class="field">
+                <div class="legends">
+                  <hr data-spacer />
+                  <small class="min">Mínimo</small>
+                  <hr data-line />
+                  <small class="max">Máximo</small>
+                </div>
+
+                <input
+                  id="question07"
+                  type="range"
+                  min="0"
+                  max="5"
+                  step="1"
+                  value="0"
+                  list="question07-list"
+                />
+
+                <datalist id="question07-list" class="scale">
+                  <option value="0">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </datalist>
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="card question">
+            <p class="description">
+              <strong>8.</strong>
+              <span>
+                Como você classifica seu desempenho em relação à
+                <em class="font-regular font-semibold">assiduidade</em>?
+              </span>
+            </p>
+
+            <div class="options">
+              <label for="question08" class="field">
+                <div class="legends">
+                  <hr data-spacer />
+                  <small class="min">Mínimo</small>
+                  <hr data-line />
+                  <small class="max">Máximo</small>
+                </div>
+
+                <input
+                  id="question08"
+                  type="range"
+                  min="0"
+                  max="5"
+                  step="1"
+                  value="0"
+                  list="question08-list"
+                />
+
+                <datalist id="question08-list" class="scale">
+                  <option value="0">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </datalist>
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="card question">
+            <p class="description">
+              <strong>9.</strong>
+              <span>
+                Como você classifica seu desempenho em relação à
+                <em class="font-regular font-semibold">dedicação</em>?
+              </span>
+            </p>
+
+            <div class="options">
+              <label for="question09" class="field">
+                <div class="legends">
+                  <hr data-spacer />
+                  <small class="min">Mínimo</small>
+                  <hr data-line />
+                  <small class="max">Máximo</small>
+                </div>
+
+                <input
+                  id="question09"
+                  type="range"
+                  min="0"
+                  max="5"
+                  step="1"
+                  value="0"
+                  list="question09-list"
+                />
+
+                <datalist id="question09-list" class="scale">
+                  <option value="0">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </datalist>
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="card question">
+            <p class="description">
+              <strong>10.</strong>
+              <span>
+                Como você classifica seu desempenho em relação à
+                <em class="font-regular font-semibold">proatividade</em>?
+              </span>
+            </p>
+
+            <div class="options">
+              <label for="question10" class="field">
+                <div class="legends">
+                  <hr data-spacer />
+                  <small class="min">Mínimo</small>
+                  <hr data-line />
+                  <small class="max">Máximo</small>
+                </div>
+
+                <input
+                  id="question10"
+                  type="range"
+                  min="0"
+                  max="5"
+                  step="1"
+                  value="0"
+                  list="question10-list"
+                />
+
+                <datalist id="question10-list" class="scale">
+                  <option value="0">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </datalist>
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="buttons">
+            <a href="./questionario.html" role="button">
+              <inline-svg
+                src="images/icon-arrow-left.svg"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+              <span>Voltar</span>
+            </a>
+
+            <a
+              href="./questionario-parte03.html"
+              role="button"
+              data-appearance="accent"
+            >
+              <inline-svg
+                src="images/icon-arrow-right.svg"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+              <span>Continuar</span>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

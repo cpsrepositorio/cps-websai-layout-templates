@@ -16,7 +16,266 @@
 
     <div class="max-width">
       <main class="font-size-body">
-        <section class="bg-acrylic-accent informative">Questionário.</section>
+        <section class="bg-acrylic-accent informative">
+          <inline-svg
+            src="images/logo-websai.svg"
+            data-size="lg"
+            data-monochromatic
+          ></inline-svg>
+
+          <hr data-spacer />
+
+          <div class="flow-horizontal space-8">
+            <div class="flow-vertical space-6">
+              <p>
+                <b>Texto introdutório explicando o questionário...</b> Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Donec pretium vulputate sapien nec sagittis aliquam malesuada
+                bibendum arcu. Neque volutpat ac tincidunt vitae semper. Commodo
+                quis imperdiet massa tincidunt. Sed risus ultricies tristique
+                nulla.
+              </p>
+              <p>
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames. Vel eros donec ac odio. Netus et malesuada
+                fames ac turpis egestas maecenas pharetra. Dui faucibus in
+                ornare quam viverra orci sagittis eu. Massa sapien faucibus et
+                molestie. Lacus luctus accumsan tortor posuere ac ut consequat
+                semper. Arcu cursus vitae congue mauris rhoncus aenean vel elit.
+              </p>
+            </div>
+
+            <inline-svg
+              src="images/page-with-help-icon.svg"
+              class="illustration hidden-below-md"
+            ></inline-svg>
+          </div>
+        </section>
+
+        <section class="bg-acrylic informative">
+          <h2 class="font-size-title font-bold">
+            Sessão 1: Informações gerais
+          </h2>
+          <p class="text-tertiary">
+            5 perguntas. 3 minutos estimados para resposta.
+          </p>
+          <p>
+            <b>Texto introdutório explicando a sessão...</b> Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Donec pretium vulputate
+            sapien nec sagittis aliquam malesuada bibendum arcu. Neque volutpat
+            ac tincidunt vitae semper. Commodo quis imperdiet massa tincidunt.
+            Sed risus ultricies tristique nulla.
+          </p>
+        </section>
+
+        <section class="bg-solid-base flow-vertical space-6">
+          <div class="card question">
+            <p class="description">
+              <strong>1.</strong>
+              <span>
+                O quanto você está satisfeito(a) com este questionário?
+              </span>
+            </p>
+
+            <div class="options">
+              <label for="question01" class="field">
+                <div class="legends">
+                  <hr data-spacer />
+                  <small class="min">Mínimo</small>
+                  <hr data-line />
+                  <small class="max">Máximo</small>
+                </div>
+
+                <input
+                  id="question01"
+                  type="range"
+                  min="0"
+                  max="5"
+                  step="1"
+                  value="0"
+                  list="question01-list"
+                />
+
+                <datalist id="question01-list" class="scale">
+                  <option value="0">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </datalist>
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="card question">
+            <p class="description">
+              <strong>2.</strong>
+              <span>Quem descobriu o Brasil?</span>
+            </p>
+
+            <div class="options">
+              <label class="check-field">
+                <input type="radio" name="question02" />
+                <span
+                  >Dom Pedro de Alcântara Francisco Antônio João Carlos Xavier
+                  de Paula Miguel Rafael Joaquim José Gonzaga Pascoal Cipriano
+                  Serafim de Bragança e Bourbon</span
+                >
+              </label>
+
+              <label class="check-field">
+                <input type="radio" name="question02" />
+                <span
+                  >Dom João Maria José Francisco Xavier de Paula Luís Antônio
+                  Domingos Rafael de Bragança</span
+                >
+              </label>
+
+              <label class="check-field">
+                <input type="radio" name="question02" />
+                <span>Pedro Álvares Cabral</span>
+              </label>
+
+              <label class="check-field">
+                <input type="radio" name="question02" />
+                <span>Cristóvão Colombo</span>
+              </label>
+
+              <label class="check-field">
+                <input type="radio" name="question02" />
+                <span>Fernão de Magalhães</span>
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="card question">
+            <p class="description">
+              <strong>3.</strong>
+              <span>Em quais locais você já ouvir falar sobre o CPS?</span>
+              <small>(Permite múltiplas opções)</small>
+            </p>
+
+            <div class="options">
+              <label class="check-field">
+                <input type="checkbox" name="question03" />
+                <span>Google</span>
+              </label>
+
+              <label class="check-field">
+                <input type="checkbox" name="question03" />
+                <span>Facebook</span>
+              </label>
+
+              <label class="check-field">
+                <input type="checkbox" name="question03" />
+                <span>Instagram</span>
+              </label>
+
+              <label class="check-field">
+                <input type="checkbox" name="question03" />
+                <span>Rádio</span>
+              </label>
+
+              <label class="check-field">
+                <input type="checkbox" name="question03" />
+                <span>TV</span>
+              </label>
+
+              <label class="check-field">
+                <input type="checkbox" name="question03" />
+                <span>Outros</span>
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="card question">
+            <p class="description">
+              <strong>4.</strong>
+              <span>Qual o nome da primeira escola onde você estudou?</span>
+            </p>
+
+            <div class="options">
+              <label for="question04" class="field">
+                <input
+                  id="question04"
+                  placeholder="Escreva sua resposta"
+                  autocomplete="off"
+                />
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="card question">
+            <p class="description">
+              <strong>5.</strong>
+              <span>Pergunta aleatória para ocupar espaço?</span>
+            </p>
+
+            <div class="options">
+              <label class="check-field">
+                <input type="radio" name="question05" />
+                <span>Lorem ipsum dolor sit amet</span>
+              </label>
+
+              <label class="check-field">
+                <input type="radio" name="question05" />
+                <span>Consectetur adipiscing elit</span>
+              </label>
+
+              <label class="check-field">
+                <input type="radio" name="question05" />
+                <span>Donec pretium vulputate sapien</span>
+              </label>
+
+              <label class="check-field">
+                <input type="radio" name="question05" />
+                <span>Vel eros donec ac odio</span>
+              </label>
+
+              <label class="check-field">
+                <input type="radio" name="question05" />
+                <span>Sed risus ultricies tristique nulla</span>
+              </label>
+            </div>
+          </div>
+
+          <hr data-line />
+
+          <div class="buttons">
+            <a href="./principal.html" role="button">
+              <inline-svg
+                src="images/icon-arrow-left.svg"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+              <span>Voltar</span>
+            </a>
+
+            <a
+              href="./questionario-parte02.html"
+              role="button"
+              data-appearance="accent"
+            >
+              <inline-svg
+                src="images/icon-arrow-right.svg"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+              <span>Continuar</span>
+            </a>
+          </div>
+        </section>
       </main>
     </div>
   </body>
