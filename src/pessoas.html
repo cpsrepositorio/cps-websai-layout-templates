@@ -1,0 +1,570 @@
+<html lang="pt-BR">
+  <head>
+    <include src="templates/head.html">
+      { "title": "Pessoas - WebSAI" }
+    </include>
+
+    <link rel="stylesheet" href="styles/pessoas.css" />
+    <script type="module" src="scripts/pessoas.js"></script>
+  </head>
+
+  <body class="bg-picture internal-page">
+    <include src="templates/header-admin.html">
+      { "current": "pessoas" }
+    </include>
+
+    <div class="max-width">
+      <main class="font-size-body">
+        <section class="bg-acrylic informative">
+          <h2 class="font-size-title font-bold">Localizador de Pessoas</h2>
+          <p class="text-secondary">
+            Preencha um ou mais campos para buscar pessoas vinculadas ao WebSAI,
+            conferir seus dados e sua situação em relação à participação nos
+            questionários.
+          </p>
+
+          <hr data-spacer />
+
+          <form novalidate>
+            <label for="regional" class="field">
+              <span>Regional</span>
+              <select id="regional">
+                <option value="">Todas as regionais</option>
+                <option value="1">Região 1</option>
+                <option value="2">Região 2</option>
+                <option value="3">Região 3</option>
+                <option value="4">Região 4</option>
+                <option value="5">Região 5</option>
+              </select>
+            </label>
+
+            <label for="unidade" class="field">
+              <span>Unidade</span>
+              <select id="unidade">
+                <option value="">Todas as unidades</option>
+                <option value="001">Administração Central</option>
+                <option value="002">Fatec X</option>
+                <option value="003">Fatec Y</option>
+                <option value="004">Etec Z</option>
+                <option value="005">Fatec W</option>
+                <option value="005">Etec J</option>
+              </select>
+            </label>
+
+            <label for="curso" class="field">
+              <span>Curso</span>
+              <select id="curso">
+                <option value="">Todos os cursos</option>
+                <option value="001">
+                  Análise e Desenvolvimento de Sistemas
+                </option>
+                <option value="002">Agronegócio</option>
+                <option value="003">Moda</option>
+                <option value="004">Gastronomia</option>
+                <option value="005">Engenharia Aeroportuária</option>
+                <option value="005">Mecatrônica</option>
+              </select>
+            </label>
+
+            <div for="situacao" class="field">
+              <span>Situação do questionário</span>
+
+              <div class="flow-horizontal space-4">
+                <label class="check-field">
+                  <input type="checkbox" name="situacao" checked />
+                  <span>Não iniciado</span>
+                </label>
+                <label class="check-field">
+                  <input type="checkbox" name="situacao" checked />
+                  <span>Andamento</span>
+                </label>
+                <label class="check-field">
+                  <input type="checkbox" name="situacao" />
+                  <span>Concluído</span>
+                </label>
+              </div>
+            </div>
+
+            <label for="busca" class="field">
+              <span>Busca textual</span>
+              <input
+                id="busca"
+                placeholder="Informe parte do nome ou do e-mail desejado"
+              />
+            </label>
+
+            <button data-appearance="accent">
+              <inline-svg
+                src="images/icon-search.svg"
+                role="presentation"
+                aria-hidden
+              ></inline-svg>
+              <span>Pesquisar</span>
+            </button>
+          </form>
+        </section>
+
+        <section class="bg-solid-base flow-vertical space-6">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Pendências</th>
+                <th />
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="detailable">
+                <td>John Doe</td>
+                <td>john.doe97@fatec.sp.gov.br</td>
+                <td>
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span>Não</span>
+                </td>
+                <td>
+                  <button data-size="sm">Detalhes</button>
+                </td>
+              </tr>
+
+              <tr class="details">
+                <td colspan="4">
+                  <div class="card">
+                    <p><strong>Nome:</strong> John Doe</p>
+                    <p><strong>Nome social:</strong> Jane Doe</p>
+                    <p><strong>Sexo:</strong> Masculino</p>
+                    <p><strong>CPF:</strong> 123.456.789-01</p>
+                    <p><strong>RG:</strong> 12.345.678-9</p>
+                    <p><strong>Nascimento:</strong> 01/09/2003</p>
+                    <p><strong>E-mail:</strong> john.doe97@fatec.sp.gov.br</p>
+                    <p><strong>E-mail alternativo:</strong> john@gmail.com</p>
+                    <p><strong>Telefone:</strong> (11) 12345-6789</p>
+                    <p>
+                      <strong>Telefone alternativo:</strong> (11) 98765-4321
+                    </p>
+                  </div>
+
+                  <hr data-spacer />
+
+                  <table>
+                    <tr>
+                      <td>WebSAI 2022</td>
+                      <td>Fatec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>WebSAI 2022</td>
+                      <td>Etec Taquaritinga</td>
+                      <td>Egresso</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr class="detailable">
+                <td>Jane Doe</td>
+                <td>jane.doe32@etec.sp.gov.br</td>
+                <td>
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span>Sim</span>
+                </td>
+                <td>
+                  <button data-size="sm">Detalhes</button>
+                </td>
+              </tr>
+
+              <tr class="details">
+                <td colspan="4">
+                  <div class="card">
+                    <p><strong>Nome:</strong> Jane Doe</p>
+                    <p><strong>Nome social:</strong> -</p>
+                    <p><strong>Sexo:</strong> Feminino</p>
+                    <p><strong>CPF:</strong> 123.456.789-01</p>
+                    <p><strong>RG:</strong> 12.345.678-9</p>
+                    <p><strong>Nascimento:</strong> 01/09/2003</p>
+                    <p><strong>E-mail:</strong> jane.doe32@etec.sp.gov.br</p>
+                    <p><strong>E-mail alternativo:</strong> -</p>
+                    <p><strong>Telefone:</strong> (11) 12345-6789</p>
+                    <p><strong>Telefone alternativo:</strong> -</p>
+                  </div>
+
+                  <hr data-spacer />
+
+                  <table>
+                    <tr>
+                      <td>WebSAI 2022</td>
+                      <td>Etec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-caution.svg"
+                          class="icon caution"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Não respondido</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>WebSAI 2021</td>
+                      <td>Etec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>WebSAI 2020</td>
+                      <td>Etec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr class="detailable">
+                <td>Fulano de Tal</td>
+                <td>fulano.tal@fatec.sp.gov.br</td>
+                <td>
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span>Sim</span>
+                </td>
+                <td>
+                  <button data-size="sm">Detalhes</button>
+                </td>
+              </tr>
+
+              <tr class="details">
+                <td colspan="4">
+                  <div class="card">
+                    <p><strong>Nome:</strong> Fulano de Tal</p>
+                    <p><strong>Nome social:</strong> -</p>
+                    <p><strong>Sexo:</strong> Masculino</p>
+                    <p><strong>CPF:</strong> 123.456.789-01</p>
+                    <p><strong>RG:</strong> 12.345.678-9</p>
+                    <p><strong>Nascimento:</strong> 01/09/2003</p>
+                    <p><strong>E-mail:</strong> fulano.tal@fatec.sp.gov.br</p>
+                    <p><strong>E-mail alternativo:</strong> -</p>
+                    <p><strong>Telefone:</strong> (11) 12345-6789</p>
+                    <p><strong>Telefone alternativo:</strong> -</p>
+                  </div>
+
+                  <hr data-spacer />
+
+                  <table>
+                    <tr>
+                      <td>WebSAI 2022</td>
+                      <td>Fatec São Paulo</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-caution.svg"
+                          class="icon caution"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Não respondido</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr class="detailable">
+                <td>Ciclano da Silva Santos</td>
+                <td>ciclano.santos104@fatec.sp.gov.br</td>
+                <td>
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span>Não</span>
+                </td>
+                <td>
+                  <button data-size="sm">Detalhes</button>
+                </td>
+              </tr>
+
+              <tr class="details">
+                <td colspan="4">
+                  <div class="card">
+                    <p><strong>Nome:</strong> Ciclano da Silva Santos</p>
+                    <p><strong>Nome social:</strong> -</p>
+                    <p><strong>Sexo:</strong> Masculino</p>
+                    <p><strong>CPF:</strong> 123.456.789-01</p>
+                    <p><strong>RG:</strong> 12.345.678-9</p>
+                    <p><strong>Nascimento:</strong> 01/09/2003</p>
+                    <p>
+                      <strong>E-mail:</strong> ciclano.santos104@fatec.sp.gov.br
+                    </p>
+                    <p><strong>E-mail alternativo:</strong> -</p>
+                    <p><strong>Telefone:</strong> (11) 12345-6789</p>
+                    <p><strong>Telefone alternativo:</strong> -</p>
+                  </div>
+
+                  <hr data-spacer />
+
+                  <table>
+                    <tr>
+                      <td>WebSAI 2022</td>
+                      <td>Fatec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>WebSAI 2022</td>
+                      <td>Etec Taquaritinga</td>
+                      <td>Egresso</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr class="detailable">
+                <td>Ana Nana</td>
+                <td>ana.nana@etec.sp.gov.br</td>
+                <td>
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span>Sim</span>
+                </td>
+                <td>
+                  <button data-size="sm">Detalhes</button>
+                </td>
+              </tr>
+
+              <tr class="details">
+                <td colspan="4">
+                  <div class="card">
+                    <p><strong>Nome:</strong> Ana Nana</p>
+                    <p><strong>Nome social:</strong> João Nano</p>
+                    <p><strong>Sexo:</strong> Feminino</p>
+                    <p><strong>CPF:</strong> 123.456.789-01</p>
+                    <p><strong>RG:</strong> 12.345.678-9</p>
+                    <p><strong>Nascimento:</strong> 01/09/2003</p>
+                    <p><strong>E-mail:</strong> ana.nana@fatec.sp.gov.br</p>
+                    <p>
+                      <strong>E-mail alternativo:</strong> joaonano@gmail.com
+                    </p>
+                    <p><strong>Telefone:</strong> (11) 12345-6789</p>
+                    <p><strong>Telefone alternativo:</strong> -</p>
+                  </div>
+
+                  <hr data-spacer />
+
+                  <table>
+                    <tr>
+                      <td>WebSAI 2022</td>
+                      <td>Fatec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-caution.svg"
+                          class="icon caution"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Não respondido</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>WebSAI 2021</td>
+                      <td>Fatec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>WebSAI 2020</td>
+                      <td>Fatec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>WebSAI 2019</td>
+                      <td>Fatec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr class="detailable">
+                <td>Aparecido Souza</td>
+                <td>aparecido.souza@fatec.sp.gov.br</td>
+                <td>
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span>Sim</span>
+                </td>
+                <td>
+                  <button data-size="sm">Detalhes</button>
+                </td>
+              </tr>
+
+              <tr class="details">
+                <td colspan="4">
+                  <div class="card">
+                    <p><strong>Nome:</strong> Aparecido Souza</p>
+                    <p><strong>Nome social:</strong> -</p>
+                    <p><strong>Sexo:</strong> Masculino</p>
+                    <p><strong>CPF:</strong> 123.456.789-01</p>
+                    <p><strong>RG:</strong> 12.345.678-9</p>
+                    <p><strong>Nascimento:</strong> 01/09/2003</p>
+                    <p>
+                      <strong>E-mail:</strong> aparecido.souza@fatec.sp.gov.br
+                    </p>
+                    <p><strong>E-mail alternativo:</strong> -</p>
+                    <p><strong>Telefone:</strong> (11) 12345-6789</p>
+                    <p><strong>Telefone alternativo:</strong> -</p>
+                  </div>
+
+                  <hr data-spacer />
+
+                  <table>
+                    <tr>
+                      <td>WebSAI 2022</td>
+                      <td>Fatec Taquaritinga</td>
+                      <td>Aluno</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-caution.svg"
+                          class="icon caution"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Não respondido</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>WebSAI 2022</td>
+                      <td>Etec Taquaritinga</td>
+                      <td>Egresso</td>
+                      <td>
+                        <inline-svg
+                          src="images/icon-success.svg"
+                          class="icon success"
+                          role="presentation"
+                          aria-hidden
+                        ></inline-svg>
+                        <span>Respondido</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
