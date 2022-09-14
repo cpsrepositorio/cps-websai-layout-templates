@@ -122,18 +122,58 @@ textarea {
     padding-right: 0.5rem;
     min-height: 2rem;
 
+    &:is(select) {
+      appearance: none;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      background-image: url('/src/images/icon-chevron-down-light.svg');
+      background-repeat: no-repeat;
+      background-size: 0.375rem 0.5rem;
+      background-position: calc(100% - 0.5rem) center;
+      background-clip: border-box;
+
+      &,
+      & option {
+        accent-color: var(--text-accent);
+      }
+
+      &[data-value=''] {
+        color: var(--text-secondary);
+      }
+
+      & option[value=''] {
+        color: var(--text-secondary);
+
+        @nest .dark & {
+          color: var(--text-inverted-secondary);
+        }
+      }
+
+      & option:not([value='']) {
+        color: var(--text-primary);
+
+        @nest .dark & {
+          color: var(--text-inverted-primary);
+        }
+      }
+    }
+
     &::placeholder {
       color: var(--text-secondary);
     }
 
     &:not(:disabled):hover {
-      background: #f5f5f5b3;
+      background-color: #f5f5f5b3;
     }
 
     &:focus-visible,
     &:not(:placeholder-shown):invalid {
       padding-bottom: calc(0.375rem - 1px);
       border-bottom-width: 2px;
+
+      &:is(select) {
+        padding-bottom: calc(0.25rem - 1px);
+      }
     }
 
     &:focus-visible {
@@ -146,7 +186,7 @@ textarea {
 
     &:disabled {
       color: var(--text-disabled);
-      background: #f9f9f94d;
+      background-color: #f9f9f94d;
       border-color: #0000000f;
 
       &::placeholder {
@@ -155,12 +195,16 @@ textarea {
     }
 
     @nest .dark & {
-      background: #ffffff0d;
+      background-color: #ffffff0d;
       border-color: #ffffff14;
       border-bottom-color: #ffffff8b;
 
+      &:is(select) {
+        background-image: url('/src/images/icon-chevron-down-dark.svg');
+      }
+
       &:not(:disabled):hover {
-        background: #ffffff15;
+        background-color: #ffffff15;
       }
 
       &:focus-visible {
@@ -168,7 +212,7 @@ textarea {
       }
 
       &:disabled {
-        background: #ffffff0b;
+        background-color: #ffffff0b;
         border-color: #ffffff12;
       }
     }
