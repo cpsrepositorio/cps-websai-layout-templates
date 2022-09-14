@@ -1,0 +1,160 @@
+table {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  overflow-x: auto;
+  border: solid 1px #0000000f;
+  border-bottom: none;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--rounded-lg);
+  box-shadow: var(--shadow-card-rest);
+
+  @nest .dark & {
+    border-color: #0000001a;
+  }
+
+  @media (width >= 768px) {
+    display: table;
+    overflow-x: hidden;
+  }
+
+  & thead {
+    background: #ffffffb3;
+    text-align: left;
+    font-size: var(--font-size-body-strong);
+
+    @nest .dark & {
+      background: #ffffff0f;
+    }
+  }
+
+  & tbody {
+    background: #f9f9f980;
+
+    @nest .dark & {
+      background: #ffffff15;
+    }
+  }
+
+  & th,
+  & tr.detailable td {
+    padding: 0.9375rem 1rem 1rem;
+    height: 3rem;
+  }
+
+  & tr {
+    transition-property: var(--transition-property);
+    transition-timing-function: var(--transition-timing-function);
+    transition-duration: var(--transition-duration);
+  }
+
+  & tr.detailable {
+    cursor: pointer;
+
+    &:hover {
+      background: #00000014;
+
+      @nest .dark & {
+        background: #ffffff15;
+      }
+    }
+  }
+
+  & tr.open,
+  & tr.details {
+    background: #00000014;
+
+    @nest .dark & {
+      background: #ffffff15;
+    }
+  }
+
+  & td {
+    & .icon,
+    & svg[role='presentation'],
+    & button,
+    & [type='button'],
+    & [type='reset'],
+    & [type='submit'],
+    & [role='button'] {
+      display: inline-block;
+      margin: -0.5rem 0;
+    }
+
+    & .icon,
+    & svg[role='presentation'] {
+      position: relative;
+      top: -1px;
+      margin-right: 2px;
+    }
+  }
+
+  & th,
+  & tr:not(.open) td {
+    border-bottom: solid 1px #00000014;
+
+    @nest .dark & {
+      border-bottom-color: #ffffff15;
+    }
+  }
+
+  & tr.details {
+    visibility: collapse;
+    transform-origin: top center;
+    transform: scaleY(0);
+    opacity: 0;
+
+    &.open {
+      visibility: visible;
+      transform: scaleY(1);
+      opacity: 1;
+    }
+
+    & > td {
+      padding: 0.25rem 1rem 1rem;
+    }
+
+    & .card {
+      display: block;
+      columns: 240px 3;
+      column-gap: 1.5rem;
+      background: #f9f9f980;
+      border: solid 1px #00000014;
+
+      @nest .dark & {
+        background: #ffffff15;
+        border-color: #ffffff15;
+      }
+
+      & p {
+        padding: 0.125rem 0;
+      }
+    }
+  }
+
+  & table {
+    width: 100%;
+    display: block;
+    box-shadow: none;
+
+    & tbody {
+      width: 100%;
+      display: table;
+      border-radius: inherit;
+    }
+
+    & td {
+      padding: 0.5rem 1rem;
+      height: 2rem;
+
+      &:not(:last-of-type) {
+        border-right: solid 1px #00000014;
+
+        @nest .dark & {
+          border-right-color: #ffffff15;
+        }
+      }
+    }
+  }
+}
