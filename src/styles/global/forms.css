@@ -10,6 +10,8 @@ form {
   gap: 0.25rem;
 
   & > span {
+    cursor: default;
+    text-align: left;
     font-size: var(--font-size-label);
     line-height: var(--leading-label);
   }
