@@ -1,0 +1,83 @@
+<header class="app-header bg-acrylic shadow-sm">
+  <div class="max-width content">
+    <div class="start">
+      <a href="https://www.cps.sp.gov.br/" target="_blank" class="inline-block">
+        <inline-svg
+          src="images/logo-cps.svg"
+          data-size="xs-to-sm"
+          data-touchable="true"
+          data-simple
+        ></inline-svg>
+      </a>
+
+      <a href="./principal.html" class="inline-block">
+        <inline-svg
+          src="images/logo-websai.svg"
+          data-size="xs-to-sm"
+          data-touchable="true"
+        ></inline-svg>
+      </a>
+    </div>
+
+    <div class="middle admin">
+      <nav>
+        <a
+          href="./principal-admin.html"
+          data-target="principal"
+          data-current="{{ current }}"
+        >
+          <inline-svg
+            src="images/icon-home.svg"
+            role="presentation"
+            aria-hidden
+            data-size="xl"
+          ></inline-svg>
+          <span>Principal</span>
+        </a>
+
+        <a
+          href="./acompanhamento.html"
+          data-target="acompanhamento"
+          data-current="{{ current }}"
+        >
+          <inline-svg
+            src="images/icon-chart-multiple.svg"
+            role="presentation"
+            aria-hidden
+            data-size="xl"
+          ></inline-svg>
+          <span>Acompanhar</span>
+        </a>
+
+        <a
+          href="./pessoas.html"
+          data-target="pessoas"
+          data-current="{{ current }}"
+        >
+          <inline-svg
+            src="images/icon-people-list.svg"
+            role="presentation"
+            aria-hidden
+            data-size="xl"
+          ></inline-svg>
+          <span>Pessoas</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="end">
+      <include src="templates/color-scheme-button.html">
+        { "appearance": "ghost" }
+      </include>
+
+      <a href="./index.html" class="inline-block rounded-full" title="Sair">
+        <div class="avatar" data-touchable>
+          <img
+            src="images/sample-avatar-female.jpg?width=42"
+            alt="Kimber Knapczyk"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+</header>

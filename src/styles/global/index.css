@@ -208,6 +208,89 @@ hr {
         display: none;
       }
     }
+
+    & > .middle.admin {
+      margin-bottom: -0.75rem;
+
+      @media (width >= 768px) {
+        margin: -0.1875rem 0;
+      }
+
+      & nav {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        gap: 0.5rem;
+
+        & a {
+          transition-property: var(--transition-property);
+          transition-timing-function: var(--transition-timing-function);
+          transition-duration: var(--transition-duration);
+          position: relative;
+          display: grid;
+          place-items: center;
+          grid-template-rows: 1fr auto;
+          gap: 0.25rem;
+          width: 4.25rem;
+          height: 3rem;
+          padding: 0.25rem;
+          border-radius: var(--rounded-md);
+          color: var(--text-secondary);
+
+          &[data-target='principal'][data-current='principal'],
+          &[data-target='acompanhamento'][data-current='acompanhamento'],
+          &[data-target='pessoas'][data-current='pessoas'] {
+            pointer-events: none;
+            background: #0000000a;
+            color: var(--text-accent);
+            grid-template-rows: 1fr 0.1875rem;
+
+            & span {
+              display: none;
+            }
+
+            &::after {
+              content: '';
+              width: 55%;
+              height: 0.1875rem;
+              border-radius: var(--rounded-sm);
+              background: var(--text-accent);
+            }
+
+            @nest .dark & {
+              background: #ffffff0f;
+            }
+          }
+
+          &:hover,
+          &:active {
+            background: #0000000a;
+
+            @nest .dark & {
+              background: #ffffff0f;
+            }
+          }
+
+          &:hover {
+            color: var(--text-primary);
+          }
+
+          &:active {
+            color: var(--text-tertiary);
+          }
+
+          & span {
+            display: block;
+            width: 100%;
+            font-size: var(--font-size-caption);
+            line-height: var(--leading-caption);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
   }
 }
 
