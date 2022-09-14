@@ -16,4 +16,28 @@ svg[role='presentation'] {
   &[data-size='xl'] {
     height: 1.5rem;
   }
+
+  &.caution {
+    color: var(--text-caution);
+  }
+
+  &.success {
+    color: var(--text-success);
+  }
+
+  &.critical {
+    color: var(--text-critical);
+  }
+
+  &.caution,
+  &.success,
+  &.critical {
+    & rect {
+      fill: currentColor;
+    }
+
+    & path {
+      fill: var(--text-inverted-primary);
+    }
+  }
 }
