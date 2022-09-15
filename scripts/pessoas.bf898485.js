@@ -1,0 +1,2 @@
+!function(){function e(t){[...document.querySelectorAll("tr.detailable.open")].filter((e=>e!==t)).forEach((t=>e(t)));const l=t.querySelector("button");l.textContent="Detalhes"===l.textContent?"Contrair":"Detalhes",t.classList.toggle("open"),t.nextElementSibling.classList.toggle("open")}[...document.querySelectorAll("tr.detailable")].forEach((t=>{t.addEventListener("click",(()=>e(t)))}))}();
+//# sourceMappingURL=pessoas.bf898485.js.map
