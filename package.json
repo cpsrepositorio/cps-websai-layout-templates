@@ -13,7 +13,7 @@
     "start": "http-server -b -o cps-websai-layout-templates",
     "prepublish": "rm -rf dist",
     "publish": "parcel build src/index.html --dist-dir dist --no-cache --no-optimize --no-source-maps",
-    "postpublish": "yarn prettier --write dist/**/*.{html,css,js,svg}",
+    "postpublish": "yarn prettier --write dist/**/*.{html,css,js}",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d cps-websai-layout-templates"
   },
