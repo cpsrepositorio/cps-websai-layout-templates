@@ -156,3 +156,8 @@ $7b782bc0bc9f7873$var$detectColorScheme()
   input.dataset.value = input.value
   input.addEventListener('input', () => (input.dataset.value = input.value))
 })
+
+;[...document.querySelectorAll('select')].forEach((select) => {
+  select.dataset.value = select.value
+  select.addEventListener('change', () => (select.dataset.value = select.value))
+})

@@ -1,0 +1,54 @@
+form {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  form {
+    grid-template-columns: repeat(6, 1fr);
+    align-items: end;
+    column-gap: 1.5rem;
+    display: grid;
+  }
+
+  form [for='regional'] {
+    grid-area: 1 / 1 / 1 / span 3;
+  }
+
+  form [for='unidade'] {
+    grid-area: 1 / span 3 / 1 / -1;
+  }
+
+  form [for='curso'] {
+    grid-area: 2 / 1 / 2 / span 3;
+  }
+
+  form [for='situacao'] {
+    grid-area: 2 / span 3 / 2 / -1;
+  }
+
+  form [for='busca'] {
+    grid-area: 3 / 1 / 3 / span 5;
+  }
+
+  form button {
+    grid-area: 3 / span 1 / 3 / -1;
+  }
+}
+
+section > table > tbody > tr > td:nth-child(1) {
+  white-space: nowrap;
+}
+
+section > table > tbody > tr > td:nth-child(3) {
+  width: 10rem;
+}
+
+section > table > tbody > tr > td:not(:only-child):last-child {
+  width: 5.75rem;
+  text-align: right;
+}
+
+section > table table td:last-child {
+  width: 10rem;
+  text-align: right;
+}
