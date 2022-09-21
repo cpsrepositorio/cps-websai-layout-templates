@@ -7,7 +7,7 @@
   "private": true,
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "dev": "parcel src/index.html --dist-dir cps-websai-layout-templates --open",
+    "dev": "rm -rf .parcel-cache && parcel src/index.html --dist-dir cps-websai-layout-templates --open",
     "build": "rm -rf cps-websai-layout-templates && parcel build src/index.html --dist-dir cps-websai-layout-templates --public-url /cps-websai-layout-templates",
     "prestart": "yarn build",
     "start": "http-server -b -o cps-websai-layout-templates",
