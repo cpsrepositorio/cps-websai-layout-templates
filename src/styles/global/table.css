@@ -62,7 +62,8 @@ table {
   }
 
   & tr.open,
-  & tr.details {
+  & tr.details,
+  & tr.highlighted {
     background: #00000014;
 
     @nest .dark & {
