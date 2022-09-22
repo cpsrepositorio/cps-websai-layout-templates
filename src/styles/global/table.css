@@ -166,3 +166,47 @@ table {
     }
   }
 }
+
+.pagination {
+  & td > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.75rem;
+    column-gap: 0.375rem;
+    margin: 0 -1rem;
+
+    @media (width >= 768px) {
+      margin: 0;
+    }
+
+    & p {
+      font-size: var(--font-size-label);
+      line-height: var(--leading-label);
+      color: var(--text-secondary);
+      flex: 1 0 100%;
+      text-align: center;
+      order: 1;
+
+      @media (width >= 768px) {
+        flex: 1;
+        order: 0;
+        text-align: right;
+        padding-right: 0.75rem;
+      }
+    }
+
+    & span {
+      color: var(--text-secondary);
+      margin: 0 0.25rem;
+    }
+
+    & button {
+      border-radius: var(--rounded-full);
+      width: 2rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
