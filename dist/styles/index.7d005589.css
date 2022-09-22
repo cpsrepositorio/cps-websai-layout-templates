@@ -848,6 +848,10 @@ button,
   height: 1.5rem;
 }
 
+:is(.icon, svg[role='presentation']).attention {
+  color: var(--text-attention);
+}
+
 :is(.icon, svg[role='presentation']).caution {
   color: var(--text-caution);
 }
@@ -860,12 +864,12 @@ button,
   color: var(--text-critical);
 }
 
-:is(:is(.icon, svg[role='presentation']).caution, :is(.icon, svg[role='presentation']).success, :is(.icon, svg[role='presentation']).critical)
+:is(:is(.icon, svg[role='presentation']).attention, :is(.icon, svg[role='presentation']).caution, :is(.icon, svg[role='presentation']).success, :is(.icon, svg[role='presentation']).critical)
   rect {
   fill: currentColor;
 }
 
-:is(:is(.icon, svg[role='presentation']).caution, :is(.icon, svg[role='presentation']).success, :is(.icon, svg[role='presentation']).critical)
+:is(:is(.icon, svg[role='presentation']).attention, :is(.icon, svg[role='presentation']).caution, :is(.icon, svg[role='presentation']).success, :is(.icon, svg[role='presentation']).critical)
   path {
   fill: var(--text-inverted-primary);
 }
@@ -1881,13 +1885,14 @@ table {
   }
 }
 
-table thead {
+table thead,
+table tfoot {
   text-align: left;
   font-size: var(--font-size-body-strong);
   background: #ffffffb3;
 }
 
-.dark table thead {
+.dark :is(table thead, table tfoot) {
   background: #ffffff0f;
 }
 
@@ -1900,7 +1905,7 @@ table tbody {
 }
 
 table th,
-table tr.detailable td {
+table tr:not(.details) td {
   height: 3rem;
   padding: 0.9375rem 1rem 1rem;
 }
@@ -1924,27 +1929,28 @@ table tr.detailable:hover {
 }
 
 table tr.open,
-table tr.details {
+table tr.details,
+table tr.highlighted {
   background: #00000014;
 }
 
-.dark :is(table tr.open, table tr.details) {
+.dark :is(table tr.open, table tr.details, table tr.highlighted) {
   background: #ffffff15;
 }
 
-table td .icon,
-table td svg[role='presentation'],
-table td button,
-table td [type='button'],
-table td [type='reset'],
-table td [type='submit'],
-table td [role='button'] {
+table tbody td .icon,
+table tbody td svg[role='presentation'],
+table tbody td button,
+table tbody td [type='button'],
+table tbody td [type='reset'],
+table tbody td [type='submit'],
+table tbody td [role='button'] {
   margin: -0.5rem 0;
   display: inline-block;
 }
 
-table td .icon,
-table td svg[role='presentation'] {
+table tbody td .icon,
+table tbody td svg[role='presentation'] {
   margin-right: 2px;
   position: relative;
   top: -1px;
@@ -1993,6 +1999,10 @@ table tr.details .card p {
   padding: 0.125rem 0;
 }
 
+table tfoot tr td {
+  border-bottom: none !important;
+}
+
 table table {
   width: 100%;
   box-shadow: none;
@@ -2016,6 +2026,51 @@ table table td:not(:last-of-type) {
 
 .dark table table td:not(:last-of-type) {
   border-right-color: #ffffff15;
+}
+
+.pagination td > div {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem 0.375rem;
+  margin: 0 -1rem;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .pagination td > div {
+    margin: 0;
+  }
+}
+
+.pagination td > div p {
+  font-size: var(--font-size-label);
+  line-height: var(--leading-label);
+  color: var(--text-secondary);
+  text-align: center;
+  flex: 1 0 100%;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .pagination td > div p {
+    text-align: right;
+    flex: 1;
+    order: 0;
+    padding-right: 0.75rem;
+  }
+}
+
+.pagination td > div span {
+  color: var(--text-secondary);
+  margin: 0 0.25rem;
+}
+
+.pagination td > div button {
+  border-radius: var(--rounded-full);
+  width: 2rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 html,
@@ -2499,4 +2554,54 @@ body.internal-page > .max-width main > section.informative {
 
 .dark .card {
   border: 1px solid #0000001a;
+}
+
+.card:-webkit-any(a[href]) {
+  transition-property: var(--transition-property);
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+  box-shadow: var(--shadow-card-rest);
+}
+
+.card:-webkit-any(a[href]):hover {
+  box-shadow: var(--shadow-card-hover);
+  background: var(--background-solid-quarternary);
+  transform: translateY(-1px);
+}
+
+.card:-webkit-any(a[href]):active {
+  box-shadow: none;
+  background: var(--background-solid-secondary);
+  transform: translateY(0);
+}
+
+.card:is(a[href]) {
+  transition-property: var(--transition-property);
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+  box-shadow: var(--shadow-card-rest);
+}
+
+.card:is(a[href]):hover {
+  box-shadow: var(--shadow-card-hover);
+  background: var(--background-solid-quarternary);
+  transform: translateY(-1px);
+}
+
+.card:is(a[href]):active {
+  box-shadow: none;
+  background: var(--background-solid-secondary);
+  transform: translateY(0);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
 }

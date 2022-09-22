@@ -16,14 +16,14 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/styles/index.513e72f2.css" />
+    <link rel="stylesheet" href="/styles/index.7d005589.css" />
     <script type="module" src="/scripts/index.236284c9.js" defer=""></script>
     <script src="/scripts/index.1e690b82.js" defer="" nomodule=""></script>
 
-    <link rel="stylesheet" href="/styles/acompanhamento.b2ab88ca.css" />
-    <script type="module" src="/scripts/acompanhamento.b2ab88ca.js"></script>
+    <link rel="stylesheet" href="/styles/acompanhamento.8e7c5d76.css" />
+    <script type="module" src="/scripts/acompanhamento.03b7c266.js"></script>
     <script
-      src="/scripts/acompanhamento.0319d055.js"
+      src="/scripts/acompanhamento.5f9b12af.js"
       nomodule=""
       defer=""
     ></script>
@@ -194,13 +194,605 @@
         <section class="bg-acrylic informative">
           <h2 class="font-size-title font-bold">Acompanhamento de Coleta</h2>
           <p class="text-secondary">
-            <em>TODO:</em> Interface de acompanhamento da coleta, permitindo à
-            AAI filtrar detalhadamente por regiões e unidades, ou aos
-            administradores de cada unidade filtrarem por curso.
+            Visualize informações resumidas ou detalhadas sobre o estado atual
+            de coleta de resposta nos questionários em aberto, opcionalmente
+            filtrando conforme desejado.
           </p>
+
+          <hr data-spacer="" />
+
+          <form novalidate="">
+            <label for="regional" class="field">
+              <span>Regional</span>
+              <select id="regional">
+                <option value="">Todas as regionais</option>
+                <option value="1">Região 1</option>
+                <option value="2">Região 2</option>
+                <option value="3">Região 3</option>
+                <option value="4">Região 4</option>
+                <option value="5">Região 5</option>
+              </select>
+            </label>
+
+            <label for="unidade" class="field">
+              <span>Unidade</span>
+              <select id="unidade">
+                <option value="">Todas as unidades</option>
+                <option value="001">Administração Central</option>
+                <option value="002">Fatec X</option>
+                <option value="003">Fatec Y</option>
+                <option value="004">Etec Z</option>
+                <option value="005">Fatec W</option>
+                <option value="005">Etec J</option>
+              </select>
+            </label>
+
+            <label for="perfil" class="field">
+              <span>Perfil do respondente</span>
+              <select id="perfil">
+                <option value="">Todos os perfis</option>
+                <option value="001">Administração Central</option>
+                <option value="002">Diretor</option>
+                <option value="003">Coordenador de Curso</option>
+                <option value="004">Funcionário Administrativo</option>
+                <option value="005">Professor</option>
+                <option value="005">Aluno</option>
+              </select>
+            </label>
+
+            <label for="curso" class="field">
+              <span>Curso</span>
+              <select id="curso">
+                <option value="">Todos os cursos</option>
+                <option value="001">
+                  Análise e Desenvolvimento de Sistemas
+                </option>
+                <option value="002">Agronegócio</option>
+                <option value="003">Moda</option>
+                <option value="004">Gastronomia</option>
+                <option value="005">Engenharia Aeroportuária</option>
+                <option value="005">Mecatrônica</option>
+              </select>
+            </label>
+          </form>
         </section>
 
-        <section class="bg-solid-base flow-vertical space-6"></section>
+        <section class="bg-acrylic-accent flow-horizontal">
+          <a href="#total" class="card check-field">
+            <svg
+              viewBox="0 0 16 16"
+              class="icon attention"
+              role="presentation"
+              aria-hidden=""
+            >
+              <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+              <path
+                d="M7.28 7.48a.72.72 0 011.44 0v4.32a.72.72 0 01-1.44 0V7.48zM8 4.1a1.08 1.08 0 100 2.16A1.08 1.08 0 008 4.1z"
+                fill="#fff"
+              ></path>
+            </svg>
+
+            <div>
+              <h3>Total</h3>
+              <strong>38.752</strong>
+              <small>pessoas</small>
+            </div>
+
+            <input type="checkbox" disabled="" />
+          </a>
+
+          <a href="#pendentes" class="card check-field">
+            <svg
+              viewBox="0 0 16 16"
+              class="icon caution"
+              role="presentation"
+              aria-hidden=""
+            >
+              <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+              <path
+                d="M6.998 8V3.998a.99.99 0 01.076-.387 1.06 1.06 0 01.217-.316c.094-.09.201-.16.322-.211A.929.929 0 018 3.002c.137 0 .266.027.387.082a.987.987 0 01.533.527c.055.121.082.25.082.387V8a.929.929 0 01-.082.387.997.997 0 01-.217.322 1.06 1.06 0 01-.316.217.99.99 0 01-.387.076.99.99 0 01-.387-.076 1.14 1.14 0 01-.322-.217 1.14 1.14 0 01-.217-.322A.99.99 0 016.998 8zm-.246 4.002c0-.172.033-.334.1-.486a1.282 1.282 0 01.662-.668c.152-.067.314-.1.486-.1s.332.033.48.1a1.281 1.281 0 01.668.668c.067.152.1.314.1.486s-.033.334-.1.486a1.303 1.303 0 01-.668.662 1.19 1.19 0 01-.48.1c-.172 0-.334-.033-.486-.1a1.303 1.303 0 01-.662-.662 1.204 1.204 0 01-.1-.486z"
+                fill="#fff"
+              ></path>
+            </svg>
+
+            <div>
+              <h3>Pendentes</h3>
+              <strong>32.502</strong>
+              <small>pessoas</small>
+            </div>
+
+            <input type="checkbox" disabled="" />
+          </a>
+
+          <a href="#concluidos" class="card check-field">
+            <svg
+              viewBox="0 0 16 16"
+              class="icon success"
+              role="presentation"
+              aria-hidden=""
+            >
+              <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+              <path
+                d="M3.377 8.498a.613.613 0 01.38-.574.602.602 0 01.686.135L6.5 10.115l5.057-5.056a.609.609 0 01.685-.135.546.546 0 01.2.135.605.605 0 01.134.205.542.542 0 01.053.234c0 .172-.063.32-.188.445L6.94 11.44a.599.599 0 01-.44.188.602.602 0 01-.438-.188L3.559 8.943a.606.606 0 01-.182-.445z"
+                fill="#fff"
+              ></path>
+            </svg>
+
+            <div>
+              <h3>Concluídos</h3>
+              <strong>6.250</strong>
+              <small>pessoas</small>
+            </div>
+
+            <input type="checkbox" disabled="" />
+          </a>
+        </section>
+
+        <section class="bg-solid-base flow-vertical space-6">
+          <table>
+            <thead>
+              <tr>
+                <td colspan="3">
+                  <h5>Unidade: <strong>Fatec Taquaritinga</strong></h5>
+                </td>
+                <th>
+                  <button
+                    id="exportar"
+                    data-appearance="accent"
+                    data-size="sm"
+                    class="font-normal"
+                  >
+                    Exportar
+                  </button>
+                </th>
+              </tr>
+
+              <tr>
+                <td colspan="4">
+                  <h5>Curso: <strong>Administração</strong></h5>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody hidden="">
+              <tr class="highlighted">
+                <td colspan="4">
+                  <h6>Semestre de ingresso: <strong>2º/2022</strong></h6>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Asdrubal Souza Silva Santos</td>
+                <td>
+                  <p>asdrubal.santos@fatec.sp.gov.br</p>
+                </td>
+                <td></td>
+                <td title="Não respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M6.998 8V3.998a.99.99 0 01.076-.387 1.06 1.06 0 01.217-.316c.094-.09.201-.16.322-.211A.929.929 0 018 3.002c.137 0 .266.027.387.082a.987.987 0 01.533.527c.055.121.082.25.082.387V8a.929.929 0 01-.082.387.997.997 0 01-.217.322 1.06 1.06 0 01-.316.217.99.99 0 01-.387.076.99.99 0 01-.387-.076 1.14 1.14 0 01-.322-.217 1.14 1.14 0 01-.217-.322A.99.99 0 016.998 8zm-.246 4.002c0-.172.033-.334.1-.486a1.282 1.282 0 01.662-.668c.152-.067.314-.1.486-.1s.332.033.48.1a1.281 1.281 0 01.668.668c.067.152.1.314.1.486s-.033.334-.1.486a1.303 1.303 0 01-.668.662 1.19 1.19 0 01-.48.1c-.172 0-.334-.033-.486-.1a1.303 1.303 0 01-.662-.662 1.204 1.204 0 01-.1-.486z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Fulana de Tal de Albuquerque</td>
+                <td>
+                  <p>fulana.albuquerque@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(09) 87654-3210</p>
+                </td>
+                <td title="Não respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M6.998 8V3.998a.99.99 0 01.076-.387 1.06 1.06 0 01.217-.316c.094-.09.201-.16.322-.211A.929.929 0 018 3.002c.137 0 .266.027.387.082a.987.987 0 01.533.527c.055.121.082.25.082.387V8a.929.929 0 01-.082.387.997.997 0 01-.217.322 1.06 1.06 0 01-.316.217.99.99 0 01-.387.076.99.99 0 01-.387-.076 1.14 1.14 0 01-.322-.217 1.14 1.14 0 01-.217-.322A.99.99 0 016.998 8zm-.246 4.002c0-.172.033-.334.1-.486a1.282 1.282 0 01.662-.668c.152-.067.314-.1.486-.1s.332.033.48.1a1.281 1.281 0 01.668.668c.067.152.1.314.1.486s-.033.334-.1.486a1.303 1.303 0 01-.668.662 1.19 1.19 0 01-.48.1c-.172 0-.334-.033-.486-.1a1.303 1.303 0 01-.662-.662 1.204 1.204 0 01-.1-.486z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>John Doe</td>
+                <td>
+                  <p>john.doe123@fatec.sp.gov.br</p>
+                  <p>johndoe@gmail.com</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                  <p>(98) 7654-3210</p>
+                </td>
+                <td title="Respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M3.377 8.498a.613.613 0 01.38-.574.602.602 0 01.686.135L6.5 10.115l5.057-5.056a.609.609 0 01.685-.135.546.546 0 01.2.135.605.605 0 01.134.205.542.542 0 01.053.234c0 .172-.063.32-.188.445L6.94 11.44a.599.599 0 01-.44.188.602.602 0 01-.438-.188L3.559 8.943a.606.606 0 01-.182-.445z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>John Richard Doe</td>
+                <td>
+                  <p>john.doe124@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Não respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M6.998 8V3.998a.99.99 0 01.076-.387 1.06 1.06 0 01.217-.316c.094-.09.201-.16.322-.211A.929.929 0 018 3.002c.137 0 .266.027.387.082a.987.987 0 01.533.527c.055.121.082.25.082.387V8a.929.929 0 01-.082.387.997.997 0 01-.217.322 1.06 1.06 0 01-.316.217.99.99 0 01-.387.076.99.99 0 01-.387-.076 1.14 1.14 0 01-.322-.217 1.14 1.14 0 01-.217-.322A.99.99 0 016.998 8zm-.246 4.002c0-.172.033-.334.1-.486a1.282 1.282 0 01.662-.668c.152-.067.314-.1.486-.1s.332.033.48.1a1.281 1.281 0 01.668.668c.067.152.1.314.1.486s-.033.334-.1.486a1.303 1.303 0 01-.668.662 1.19 1.19 0 01-.48.1c-.172 0-.334-.033-.486-.1a1.303 1.303 0 01-.662-.662 1.204 1.204 0 01-.1-.486z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Maria da Silva</td>
+                <td>
+                  <p>maria.silva351@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(09) 87654-3210</p>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M3.377 8.498a.613.613 0 01.38-.574.602.602 0 01.686.135L6.5 10.115l5.057-5.056a.609.609 0 01.685-.135.546.546 0 01.2.135.605.605 0 01.134.205.542.542 0 01.053.234c0 .172-.063.32-.188.445L6.94 11.44a.599.599 0 01-.44.188.602.602 0 01-.438-.188L3.559 8.943a.606.606 0 01-.182-.445z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Mario dos Santos</td>
+                <td>
+                  <p>mario.santos521@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M3.377 8.498a.613.613 0 01.38-.574.602.602 0 01.686.135L6.5 10.115l5.057-5.056a.609.609 0 01.685-.135.546.546 0 01.2.135.605.605 0 01.134.205.542.542 0 01.053.234c0 .172-.063.32-.188.445L6.94 11.44a.599.599 0 01-.44.188.602.602 0 01-.438-.188L3.559 8.943a.606.606 0 01-.182-.445z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Zuleide Andrade Bento</td>
+                <td>
+                  <p>zuleide.bento@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(98) 7654-3210</p>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M3.377 8.498a.613.613 0 01.38-.574.602.602 0 01.686.135L6.5 10.115l5.057-5.056a.609.609 0 01.685-.135.546.546 0 01.2.135.605.605 0 01.134.205.542.542 0 01.053.234c0 .172-.063.32-.188.445L6.94 11.44a.599.599 0 01-.44.188.602.602 0 01-.438-.188L3.559 8.943a.606.606 0 01-.182-.445z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr class="highlighted">
+                <td colspan="4">
+                  <h6>Semestre de ingresso: <strong>1º/2022</strong></h6>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Asdrubal Souza Silva Santos</td>
+                <td>
+                  <p>asdrubal.santos@fatec.sp.gov.br</p>
+                </td>
+                <td></td>
+                <td title="Não respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M6.998 8V3.998a.99.99 0 01.076-.387 1.06 1.06 0 01.217-.316c.094-.09.201-.16.322-.211A.929.929 0 018 3.002c.137 0 .266.027.387.082a.987.987 0 01.533.527c.055.121.082.25.082.387V8a.929.929 0 01-.082.387.997.997 0 01-.217.322 1.06 1.06 0 01-.316.217.99.99 0 01-.387.076.99.99 0 01-.387-.076 1.14 1.14 0 01-.322-.217 1.14 1.14 0 01-.217-.322A.99.99 0 016.998 8zm-.246 4.002c0-.172.033-.334.1-.486a1.282 1.282 0 01.662-.668c.152-.067.314-.1.486-.1s.332.033.48.1a1.281 1.281 0 01.668.668c.067.152.1.314.1.486s-.033.334-.1.486a1.303 1.303 0 01-.668.662 1.19 1.19 0 01-.48.1c-.172 0-.334-.033-.486-.1a1.303 1.303 0 01-.662-.662 1.204 1.204 0 01-.1-.486z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Fulana de Tal de Albuquerque</td>
+                <td>
+                  <p>fulana.albuquerque@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(09) 87654-3210</p>
+                </td>
+                <td title="Não respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M6.998 8V3.998a.99.99 0 01.076-.387 1.06 1.06 0 01.217-.316c.094-.09.201-.16.322-.211A.929.929 0 018 3.002c.137 0 .266.027.387.082a.987.987 0 01.533.527c.055.121.082.25.082.387V8a.929.929 0 01-.082.387.997.997 0 01-.217.322 1.06 1.06 0 01-.316.217.99.99 0 01-.387.076.99.99 0 01-.387-.076 1.14 1.14 0 01-.322-.217 1.14 1.14 0 01-.217-.322A.99.99 0 016.998 8zm-.246 4.002c0-.172.033-.334.1-.486a1.282 1.282 0 01.662-.668c.152-.067.314-.1.486-.1s.332.033.48.1a1.281 1.281 0 01.668.668c.067.152.1.314.1.486s-.033.334-.1.486a1.303 1.303 0 01-.668.662 1.19 1.19 0 01-.48.1c-.172 0-.334-.033-.486-.1a1.303 1.303 0 01-.662-.662 1.204 1.204 0 01-.1-.486z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>John Doe</td>
+                <td>
+                  <p>john.doe123@fatec.sp.gov.br</p>
+                  <p>johndoe@gmail.com</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                  <p>(98) 7654-3210</p>
+                </td>
+                <td title="Respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M3.377 8.498a.613.613 0 01.38-.574.602.602 0 01.686.135L6.5 10.115l5.057-5.056a.609.609 0 01.685-.135.546.546 0 01.2.135.605.605 0 01.134.205.542.542 0 01.053.234c0 .172-.063.32-.188.445L6.94 11.44a.599.599 0 01-.44.188.602.602 0 01-.438-.188L3.559 8.943a.606.606 0 01-.182-.445z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>John Richard Doe</td>
+                <td>
+                  <p>john.doe124@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Não respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M6.998 8V3.998a.99.99 0 01.076-.387 1.06 1.06 0 01.217-.316c.094-.09.201-.16.322-.211A.929.929 0 018 3.002c.137 0 .266.027.387.082a.987.987 0 01.533.527c.055.121.082.25.082.387V8a.929.929 0 01-.082.387.997.997 0 01-.217.322 1.06 1.06 0 01-.316.217.99.99 0 01-.387.076.99.99 0 01-.387-.076 1.14 1.14 0 01-.322-.217 1.14 1.14 0 01-.217-.322A.99.99 0 016.998 8zm-.246 4.002c0-.172.033-.334.1-.486a1.282 1.282 0 01.662-.668c.152-.067.314-.1.486-.1s.332.033.48.1a1.281 1.281 0 01.668.668c.067.152.1.314.1.486s-.033.334-.1.486a1.303 1.303 0 01-.668.662 1.19 1.19 0 01-.48.1c-.172 0-.334-.033-.486-.1a1.303 1.303 0 01-.662-.662 1.204 1.204 0 01-.1-.486z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Maria da Silva</td>
+                <td>
+                  <p>maria.silva351@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(09) 87654-3210</p>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M3.377 8.498a.613.613 0 01.38-.574.602.602 0 01.686.135L6.5 10.115l5.057-5.056a.609.609 0 01.685-.135.546.546 0 01.2.135.605.605 0 01.134.205.542.542 0 01.053.234c0 .172-.063.32-.188.445L6.94 11.44a.599.599 0 01-.44.188.602.602 0 01-.438-.188L3.559 8.943a.606.606 0 01-.182-.445z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Mario dos Santos</td>
+                <td>
+                  <p>mario.santos521@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M3.377 8.498a.613.613 0 01.38-.574.602.602 0 01.686.135L6.5 10.115l5.057-5.056a.609.609 0 01.685-.135.546.546 0 01.2.135.605.605 0 01.134.205.542.542 0 01.053.234c0 .172-.063.32-.188.445L6.94 11.44a.599.599 0 01-.44.188.602.602 0 01-.438-.188L3.559 8.943a.606.606 0 01-.182-.445z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Zuleide Andrade Bento</td>
+                <td>
+                  <p>zuleide.bento@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(98) 7654-3210</p>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <svg
+                    viewBox="0 0 16 16"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden=""
+                  >
+                    <rect x=".5" y=".5" width="15" height="15" rx="7.5"></rect>
+                    <path
+                      d="M3.377 8.498a.613.613 0 01.38-.574.602.602 0 01.686.135L6.5 10.115l5.057-5.056a.609.609 0 01.685-.135.546.546 0 01.2.135.605.605 0 01.134.205.542.542 0 01.053.234c0 .172-.063.32-.188.445L6.94 11.44a.599.599 0 01-.44.188.602.602 0 01-.438-.188L3.559 8.943a.606.606 0 01-.182-.445z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tfoot class="pagination">
+              <tr>
+                <td colspan="4">
+                  <div>
+                    <p>1 a 10 de <strong>857</strong> registros</p>
+
+                    <button disabled="">
+                      <svg
+                        viewBox="0 0 20 20"
+                        role="presentation"
+                        aria-hidden=""
+                        data-size="lg"
+                      >
+                        <path
+                          d="M5.75 5a.75.75 0 00-.743.648L5 5.75v9a.75.75 0 001.493.102l.007-.102v-9A.75.75 0 005.75 5zm8.28.22a.75.75 0 00-.976-.073l-.084.073-4.5 4.5a.75.75 0 00-.073.976l.073.084 4.5 4.5a.75.75 0 001.133-.976l-.073-.084-3.97-3.97 3.97-3.97a.75.75 0 000-1.06z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button disabled="">
+                      <svg
+                        viewBox="0 0 20 20"
+                        role="presentation"
+                        aria-hidden=""
+                        data-size="lg"
+                      >
+                        <path
+                          d="M11.78 5.22a.75.75 0 00-.976-.073l-.084.073-4.5 4.5a.75.75 0 00-.073.976l.073.084 4.5 4.5a.75.75 0 001.133-.976l-.073-.084-3.97-3.97 3.97-3.97a.75.75 0 000-1.06z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button data-appearance="accent">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <span>...</span>
+                    <button>85</button>
+                    <button>
+                      <svg
+                        viewBox="0 0 20 20"
+                        role="presentation"
+                        aria-hidden=""
+                        data-size="lg"
+                      >
+                        <path
+                          d="M8.22 5.22a.75.75 0 01.976-.073l.084.073 4.5 4.5a.75.75 0 01.073.976l-.073.084-4.5 4.5a.75.75 0 01-1.133-.976l.073-.084 3.97-3.97-3.97-3.97a.75.75 0 010-1.06z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button>
+                      <svg
+                        viewBox="0 0 20 20"
+                        role="presentation"
+                        aria-hidden=""
+                        data-size="lg"
+                      >
+                        <path
+                          d="M13.5 5a.75.75 0 01.743.648l.007.102v9a.75.75 0 01-1.493.102l-.007-.102v-9A.75.75 0 0113.5 5zm-8.28.22a.75.75 0 01.976-.073l.084.073 4.5 4.5a.75.75 0 01.073.976l-.073.084-4.5 4.5a.75.75 0 01-1.133-.976l.073-.084 3.97-3.97-3.97-3.97a.75.75 0 010-1.06z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
       </main>
     </div>
   </body>

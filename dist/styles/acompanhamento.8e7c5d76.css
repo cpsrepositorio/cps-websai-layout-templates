@@ -1,0 +1,120 @@
+form {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  form {
+    grid-template-columns: repeat(6, 1fr);
+    align-items: end;
+    column-gap: 1.5rem;
+    display: grid;
+  }
+
+  form [for='regional'] {
+    grid-area: 1 / 1 / 1 / span 3;
+  }
+
+  form [for='unidade'] {
+    grid-area: 1 / span 3 / 1 / -1;
+  }
+
+  form [for='perfil'] {
+    grid-area: 2 / 1 / 2 / span 3;
+  }
+
+  form [for='curso'] {
+    grid-area: 2 / span 3 / 2 / -1;
+  }
+}
+
+section.flow-horizontal {
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+section.flow-horizontal .card {
+  max-width: 18rem;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+section.flow-horizontal .card > div {
+  flex: 1;
+}
+
+section.flow-horizontal .card input[type='checkbox'] {
+  pointer-events: none;
+  width: 0.875rem;
+  height: 0.875rem;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+section.flow-horizontal .icon {
+  height: 1.5rem;
+  display: none;
+}
+
+@media (min-width: 512px) {
+  section.flow-horizontal .icon {
+    display: block;
+  }
+}
+
+section.flow-horizontal h3 {
+  font-size: var(--font-size-label);
+  line-height: var(--leading-label);
+  color: var(--text-primary);
+}
+
+section.flow-horizontal strong {
+  font-weight: 700;
+  font-size: var(--font-size-title);
+  line-height: var(--leading-title);
+  color: var(--text-primary);
+  display: block;
+}
+
+section.flow-horizontal small {
+  font-size: var(--font-size-caption);
+  line-height: var(--leading-caption);
+  color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+  section.flow-horizontal {
+    gap: 1rem;
+  }
+}
+
+:is(section > table th, section > table td):not(:only-child):last-child {
+  width: 5.75rem;
+  text-align: right;
+}
+
+section > table td:nth-child(2) {
+  width: 40%;
+}
+
+section > table td:nth-child(3) {
+  width: 16.5rem;
+}
+
+section > table h4,
+section > table h5,
+section > table h6 {
+  font-weight: 600;
+}
+
+section > table td p {
+  display: inline-block;
+}
+
+section > table td p:not(:last-of-type) {
+  white-space: nowrap;
+  margin-right: 0.5rem;
+}
