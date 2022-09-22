@@ -425,4 +425,35 @@ body.internal-page {
   @nest .dark & {
     border: solid 1px #0000001a;
   }
+
+  &:is(a[href]) {
+    transition-property: var(--transition-property);
+    transition-timing-function: var(--transition-timing-function);
+    transition-duration: var(--transition-duration);
+    box-shadow: var(--shadow-card-rest);
+
+    &:hover {
+      box-shadow: var(--shadow-card-hover);
+      background: var(--background-solid-quarternary);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      box-shadow: none;
+      background: var(--background-solid-secondary);
+      transform: translateY(0);
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
