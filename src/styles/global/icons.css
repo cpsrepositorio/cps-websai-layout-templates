@@ -17,6 +17,10 @@ svg[role='presentation'] {
     height: 1.5rem;
   }
 
+  &.attention {
+    color: var(--text-attention);
+  }
+
   &.caution {
     color: var(--text-caution);
   }
@@ -29,6 +33,7 @@ svg[role='presentation'] {
     color: var(--text-critical);
   }
 
+  &.attention,
   &.caution,
   &.success,
   &.critical {
