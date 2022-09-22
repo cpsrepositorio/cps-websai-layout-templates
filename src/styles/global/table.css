@@ -71,23 +71,25 @@ table {
     }
   }
 
-  & td {
-    & .icon,
-    & svg[role='presentation'],
-    & button,
-    & [type='button'],
-    & [type='reset'],
-    & [type='submit'],
-    & [role='button'] {
-      display: inline-block;
-      margin: -0.5rem 0;
-    }
+  & tbody {
+    & td {
+      & .icon,
+      & svg[role='presentation'],
+      & button,
+      & [type='button'],
+      & [type='reset'],
+      & [type='submit'],
+      & [role='button'] {
+        display: inline-block;
+        margin: -0.5rem 0;
+      }
 
-    & .icon,
-    & svg[role='presentation'] {
-      position: relative;
-      top: -1px;
-      margin-right: 2px;
+      & .icon,
+      & svg[role='presentation'] {
+        position: relative;
+        top: -1px;
+        margin-right: 2px;
+      }
     }
   }
 
