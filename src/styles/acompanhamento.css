@@ -1,0 +1,119 @@
+form {
+  width: 100%;
+
+  @media (width >= 768px) {
+    display: grid;
+    align-items: end;
+    column-gap: 1.5rem;
+    grid-template-columns: repeat(6, 1fr);
+
+    & [for='regional'] {
+      grid-area: 1 / 1 / 1 / span 3;
+    }
+
+    & [for='unidade'] {
+      grid-area: 1 / span 3 / 1 / -1;
+    }
+
+    & [for='perfil'] {
+      grid-area: 2 / 1 / 2 / span 3;
+    }
+
+    & [for='curso'] {
+      grid-area: 2 / span 3 / 2 / -1;
+    }
+  }
+}
+
+section.flow-horizontal {
+  gap: 0.5rem;
+  justify-content: center;
+
+  & .card {
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 18rem;
+    position: relative;
+
+    & > div {
+      flex: 1;
+    }
+
+    & input[type='checkbox'] {
+      position: absolute;
+      pointer-events: none;
+      width: 0.875rem;
+      height: 0.875rem;
+      top: 0.75rem;
+      right: 0.75rem;
+    }
+  }
+
+  & .icon {
+    display: none;
+    height: 1.5rem;
+
+    @media (width >= 512px) {
+      display: block;
+    }
+  }
+
+  & h3 {
+    font-size: var(--font-size-label);
+    line-height: var(--leading-label);
+    color: var(--text-primary);
+  }
+
+  & strong {
+    display: block;
+    font-weight: 700;
+    font-size: var(--font-size-title);
+    line-height: var(--leading-title);
+    color: var(--text-primary);
+  }
+
+  & small {
+    font-size: var(--font-size-caption);
+    line-height: var(--leading-caption);
+    color: var(--text-secondary);
+  }
+
+  @media (width >= 768px) {
+    gap: 1rem;
+  }
+}
+
+section > table {
+  & th,
+  & td {
+    &:not(:only-child):last-child {
+      width: 5.75rem;
+      text-align: right;
+    }
+  }
+
+  & td:nth-child(2) {
+    width: 40%;
+  }
+
+  & td:nth-child(3) {
+    width: 16.5rem;
+  }
+
+  & h4,
+  & h5,
+  & h6 {
+    font-weight: 600;
+  }
+
+  & td p {
+    display: inline-block;
+
+    &:not(:last-of-type) {
+      margin-right: 0.5rem;
+      white-space: nowrap;
+    }
+  }
+}

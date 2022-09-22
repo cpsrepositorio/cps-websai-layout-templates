@@ -18,13 +18,483 @@
         <section class="bg-acrylic informative">
           <h2 class="font-size-title font-bold">Acompanhamento de Coleta</h2>
           <p class="text-secondary">
-            <em>TODO:</em> Interface de acompanhamento da coleta, permitindo à
-            AAI filtrar detalhadamente por regiões e unidades, ou aos
-            administradores de cada unidade filtrarem por curso.
+            Visualize informações resumidas ou detalhadas sobre o estado atual
+            de coleta de resposta nos questionários em aberto, opcionalmente
+            filtrando conforme desejado.
           </p>
+
+          <hr data-spacer />
+
+          <form novalidate>
+            <label for="regional" class="field">
+              <span>Regional</span>
+              <select id="regional">
+                <option value="">Todas as regionais</option>
+                <option value="1">Região 1</option>
+                <option value="2">Região 2</option>
+                <option value="3">Região 3</option>
+                <option value="4">Região 4</option>
+                <option value="5">Região 5</option>
+              </select>
+            </label>
+
+            <label for="unidade" class="field">
+              <span>Unidade</span>
+              <select id="unidade">
+                <option value="">Todas as unidades</option>
+                <option value="001">Administração Central</option>
+                <option value="002">Fatec X</option>
+                <option value="003">Fatec Y</option>
+                <option value="004">Etec Z</option>
+                <option value="005">Fatec W</option>
+                <option value="005">Etec J</option>
+              </select>
+            </label>
+
+            <label for="perfil" class="field">
+              <span>Perfil do respondente</span>
+              <select id="perfil">
+                <option value="">Todos os perfis</option>
+                <option value="001">Administração Central</option>
+                <option value="002">Diretor</option>
+                <option value="003">Coordenador de Curso</option>
+                <option value="004">Funcionário Administrativo</option>
+                <option value="005">Professor</option>
+                <option value="005">Aluno</option>
+              </select>
+            </label>
+
+            <label for="curso" class="field">
+              <span>Curso</span>
+              <select id="curso">
+                <option value="">Todos os cursos</option>
+                <option value="001">
+                  Análise e Desenvolvimento de Sistemas
+                </option>
+                <option value="002">Agronegócio</option>
+                <option value="003">Moda</option>
+                <option value="004">Gastronomia</option>
+                <option value="005">Engenharia Aeroportuária</option>
+                <option value="005">Mecatrônica</option>
+              </select>
+            </label>
+          </form>
         </section>
 
-        <section class="bg-solid-base flow-vertical space-6"></section>
+        <section class="bg-acrylic-accent flow-horizontal">
+          <a href="#total" class="card check-field">
+            <inline-svg
+              src="images/icon-info.svg"
+              class="icon attention"
+              role="presentation"
+              aria-hidden
+            ></inline-svg>
+
+            <div>
+              <h3>Total</h3>
+              <strong>38.752</strong>
+              <small>pessoas</small>
+            </div>
+
+            <input type="checkbox" disabled />
+          </a>
+
+          <a href="#pendentes" class="card check-field">
+            <inline-svg
+              src="images/icon-caution.svg"
+              class="icon caution"
+              role="presentation"
+              aria-hidden
+            ></inline-svg>
+
+            <div>
+              <h3>Pendentes</h3>
+              <strong>32.502</strong>
+              <small>pessoas</small>
+            </div>
+
+            <input type="checkbox" disabled />
+          </a>
+
+          <a href="#concluidos" class="card check-field">
+            <inline-svg
+              src="images/icon-success.svg"
+              class="icon success"
+              role="presentation"
+              aria-hidden
+            ></inline-svg>
+
+            <div>
+              <h3>Concluídos</h3>
+              <strong>6.250</strong>
+              <small>pessoas</small>
+            </div>
+
+            <input type="checkbox" disabled />
+          </a>
+        </section>
+
+        <section class="bg-solid-base flow-vertical space-6">
+          <table>
+            <thead>
+              <tr>
+                <td colspan="3">
+                  <h5>Unidade: <strong>Fatec Taquaritinga</strong></h5>
+                </td>
+                <th>
+                  <button
+                    id="exportar"
+                    data-appearance="accent"
+                    data-size="sm"
+                    class="font-normal"
+                  >
+                    Exportar
+                  </button>
+                </th>
+              </tr>
+
+              <tr>
+                <td colspan="4">
+                  <h5>Curso: <strong>Administração</strong></h5>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody hidden>
+              <tr class="highlighted">
+                <td colspan="4">
+                  <h6>Semestre de ingresso: <strong>2º/2022</strong></h6>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Asdrubal Souza Silva Santos</td>
+                <td>
+                  <p>asdrubal.santos@fatec.sp.gov.br</p>
+                </td>
+                <td />
+                <td title="Não respondido">
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Fulana de Tal de Albuquerque</td>
+                <td>
+                  <p>fulana.albuquerque@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(09) 87654-3210</p>
+                </td>
+                <td title="Não respondido">
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>John Doe</td>
+                <td>
+                  <p>john.doe123@fatec.sp.gov.br</p>
+                  <p>johndoe@gmail.com</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                  <p>(98) 7654-3210</p>
+                </td>
+                <td title="Respondido">
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>John Richard Doe</td>
+                <td>
+                  <p>john.doe124@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Não respondido">
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Maria da Silva</td>
+                <td>
+                  <p>maria.silva351@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(09) 87654-3210</p>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Mario dos Santos</td>
+                <td>
+                  <p>mario.santos521@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Zuleide Andrade Bento</td>
+                <td>
+                  <p>zuleide.bento@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(98) 7654-3210</p>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr class="highlighted">
+                <td colspan="4">
+                  <h6>Semestre de ingresso: <strong>1º/2022</strong></h6>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Asdrubal Souza Silva Santos</td>
+                <td>
+                  <p>asdrubal.santos@fatec.sp.gov.br</p>
+                </td>
+                <td />
+                <td title="Não respondido">
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Fulana de Tal de Albuquerque</td>
+                <td>
+                  <p>fulana.albuquerque@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(09) 87654-3210</p>
+                </td>
+                <td title="Não respondido">
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>John Doe</td>
+                <td>
+                  <p>john.doe123@fatec.sp.gov.br</p>
+                  <p>johndoe@gmail.com</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                  <p>(98) 7654-3210</p>
+                </td>
+                <td title="Respondido">
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>John Richard Doe</td>
+                <td>
+                  <p>john.doe124@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Não respondido">
+                  <inline-svg
+                    src="images/icon-caution.svg"
+                    class="icon caution"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Não respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Maria da Silva</td>
+                <td>
+                  <p>maria.silva351@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(09) 87654-3210</p>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Mario dos Santos</td>
+                <td>
+                  <p>mario.santos521@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Zuleide Andrade Bento</td>
+                <td>
+                  <p>zuleide.bento@fatec.sp.gov.br</p>
+                </td>
+                <td>
+                  <p>(98) 7654-3210</p>
+                  <p>(11) 123456-5678</p>
+                </td>
+                <td title="Respondido">
+                  <inline-svg
+                    src="images/icon-success.svg"
+                    class="icon success"
+                    role="presentation"
+                    aria-hidden
+                  ></inline-svg>
+                  <span class="sr-only">Respondido</span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tfoot class="pagination">
+              <tr>
+                <td colspan="4">
+                  <div>
+                    <p>1 a 10 de <strong>857</strong> registros</p>
+
+                    <button disabled>
+                      <inline-svg
+                        src="images/icon-previous-first.svg"
+                        role="presentation"
+                        aria-hidden
+                        data-size="lg"
+                      ></inline-svg>
+                    </button>
+                    <button disabled>
+                      <inline-svg
+                        src="images/icon-previous.svg"
+                        role="presentation"
+                        aria-hidden
+                        data-size="lg"
+                      ></inline-svg>
+                    </button>
+                    <button data-appearance="accent">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <span>...</span>
+                    <button>85</button>
+                    <button>
+                      <inline-svg
+                        src="images/icon-next.svg"
+                        role="presentation"
+                        aria-hidden
+                        data-size="lg"
+                      ></inline-svg>
+                    </button>
+                    <button>
+                      <inline-svg
+                        src="images/icon-next-last.svg"
+                        role="presentation"
+                        aria-hidden
+                        data-size="lg"
+                      ></inline-svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
       </main>
     </div>
   </body>
